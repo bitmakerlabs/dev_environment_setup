@@ -60,7 +60,7 @@ The Ubuntu installation process has seven main screens:
 #### Screen One - Choose to Install Then Select Your Language 
 * English
 
-###Screen Two - Ready Your Setup
+#### Screen Two - Ready Your Setup
 * Plug into a power source
 * Connect to the internet (wifi or cable) 
 * The options to 'update from the internet while installing' and/or including the proprietary codecs for MP3's and Flash, etc. are optional
@@ -70,7 +70,7 @@ The Ubuntu installation process has seven main screens:
 #### Screen Three - Choose Your Installation Type
 * If you are dual booting with Windows, select the 'alongside' option or select 'Something Else' to target your partition manually (if you go the manual route, don't forget to add a mount point)
 * Otherwise, choose 'Erase Disk for Installation' or 'Replace X with Ubuntu'
-* As an addon to the erase option, enrypting your entire hard drive doesn't hurt. (Remember to use a different password then the one below for the operating system.) If you are dual booting this option isn't available to you but there is an option to encrypt your Linux home folder later on in the installation.
+* As an addon to the erase option, enrypting your entire hard drive doesn't hurt. (Remember to use a different password than the one below for the operating system.) If you are dual booting this option isn't available to you but there is an option to encrypt your Linux home folder later on in the installation.
 
 ![Choose Your Installation Type](/assets/screen3.jpg)
 
@@ -80,7 +80,7 @@ The Ubuntu installation process has seven main screens:
 ![Choose Your Time Zone](/assets/screen4.jpg)
 
 #### Screen Five - Choose Your Keyboard Layout
-* Typically English(US) or English (MacIntosh)
+* Typically English(US) or English (US, MacIntosh)
 
 ![Choose Your Keyboard Layout](/assets/screen5.jpg)
 
@@ -92,7 +92,7 @@ The Ubuntu installation process has seven main screens:
 ![Create a User Name and Password](/assets/screen6.jpg)
 
 #### Screen Seven - Ubuntu One
-* The company that cares for Ubuntu (Canonical Inc.) is trying to sell you on their cloud service. Ignore this screen.
+* The company that cares for Ubuntu (Canonical Inc.) is trying to sell you on their cloud service. Log in later.
 
 ![Ubuntu One](/assets/screen7.jpg)
 
@@ -108,7 +108,7 @@ If above, you chose not to 'install updates when installing' you will want to do
 CTRL-ALT + T will open the commmand line via Terminal.
 
 Once the system reboots and you login, open the Terminal.
-When prompted run the following three commands at the command line, one at a time and in order:
+When prompted, run the following three commands at the command line, one at a time and in order:  
 	`sudo apt-get update`  
 	`sudo apt-get upgrade`  
 	`sudo apt-get dist-upgrade`  
@@ -117,9 +117,9 @@ Awesome! That's it.
 
 At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling any of the cruft you don't want. At a bare minimum, you should de-amazonify your system. 
 
-![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](http://img.gawkerassets.com/img/182n7ksk0mvonjpg/ku-xlarge.jpg)	
+![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](/assets/de_amazon.jpeg)	
 
-Click on the top icon in the left-hand navigation (the button that looks like it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher. 
+Click on the top icon in the left-hand navigation (the button that [looks like](/assets/de_amazon.jpeg) it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher. 
 
 To make these changes permanent, see [How to remove Amazon and Ubuntu One Music?](http://askubuntu.com/questions/363912/how-to-remove-amazon-and-ubuntu-one-music) at askubuntu.com
 
