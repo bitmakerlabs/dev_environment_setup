@@ -8,21 +8,21 @@ This guide is accurate as of 02/14 on Ubuntu 13.10
 
 This is a companion document to Ryan Ming's [Rails Dev Setup Guide](https://github.com/rynmng/rails-dev-setup-guide). If you are running a Mac, ignore what's below. If you are rock'n Linux, we suggest you scan Ryan's document for context, pour yourself a refreshing drink, then jump into it below.
 
-## Assumptions
+### Assumptions
 
-	* you have a backup of all the important data on your computer
-	* you are a new-ish developer that isn't easily intimidated (i.e. you are not afraid to tinker with your setup)
-	* you want to install Ubuntu and only Ubuntu. Frankly if you are into Arch or RedHat Linux you probably know what you are doing and can skip this entire thing
-	* you have a machine that has the appropriate graphics card/driver support to run Ubuntu. If you are not sure, check the [ubuntu certification program](http://www.ubuntu.com/certification/desktop/ "Ubuntu Desktop certified hardware") or use Google to find a fellow traveler in opensourceland with the same machine as yours. Installing Ubuntu on an uncertified machine is possible but will likely require tinkering with the settings (e.g., graphics, wifi, camera, speaker volume, screen colour, etc.) and that is outside the scope of these instructions. 
-	* lastly we assume you can tolerate the ambiguity in this guide and you are able to figure when, and what to do if, the instructions don't apply to your situation. 
+* you have a backup of all the important data on your computer
+* you are a new-ish developer that isn't easily intimidated (i.e. you are not afraid to tinker with your setup)
+* you want to install Ubuntu and only Ubuntu. Frankly if you are into Arch or RedHat Linux you probably know what you are doing and can skip this entire thing
+* you have a machine that has the appropriate graphics card/driver support to run Ubuntu. If you are not sure, check the [ubuntu certification program](http://www.ubuntu.com/certification/desktop/ "Ubuntu Desktop certified hardware") or use Google to find a fellow traveler in opensourceland with the same machine as yours. Installing Ubuntu on an uncertified machine is possible but will likely require tinkering with the settings (e.g., graphics, wifi, camera, speaker volume, screen colour, etc.) and that is outside the scope of these instructions. 
+* lastly we assume you can tolerate the ambiguity in this guide and you are able to figure when, and what to do if, the instructions don't apply to your situation. 
 
 Cool? Let's get started.
 
-## Glossary
+### Glossary
 
 Let's get some terms out of the way.
 
-* __BIOS__ or [Basic Input/Output System](http://en.wikipedia.org/wiki/BIOS "Wikipedia entry for BIOS")is to your operating system what a starter motor is to your car's engine.
+* __BIOS__ or [Basic Input/Output System](http://en.wikipedia.org/wiki/BIOS "Wikipedia entry for BIOS") is to your operating system what a starter motor is to your car's engine.
 * __UEFI__ or [Unified Extensible Firmware Interface](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface "Wikipedia Entry for UEFI") is essentially a new and improved BIOS. UEFI has gotten more popular in the last year or two and is expected to gradually displace the older BIOS implmentation over time. Machines running Windows8 are typically optimized using UEFI. On the other hand Ubuntu typically plays nicer with BIOS. The conflict between the two can derail a dual-boot implementation in a hurry. 
 * __Boot order__ is a setting in BIOS/UEFI that dictates what happens when your machine starts up. Typically the boot order tells the machine to load the operating system on the hard drive first thing. To install Linux from USB or DVD, you will typically need to modify the boot order setting to allow access to these devices _before_ the hard drive is accessed. On newer machines modifying the bootorder can itself require other changes to settings in the BIOS/UEFI (i.e. you might need to disable a boot order security setting, etc.)
 * __Boot loader__ is a 'menu' that allows a user to select one of several options when starting up your computer. Ubuntu comes with the [GRand Unified Bootloader](http://en.wikipedia.org/wiki/GRand_Unified_Bootloader "Wikipedia entry for GRUB") (GRUB). If you dual boot Linux/Windows side-by-side you will typically -- after installation -- have to select one or the other from the boot loader menu at startup.
@@ -33,7 +33,6 @@ Got all that? Great. Here's what you need to do to get Ubuntu onto your computer
 	2. Download Ubuntu from the internet, then transfer it to a USB or DVD
 	3. Install Ubuntu from that media to the designated space on your machine
 
-<hr>
 ## Part One Preparing Your Hard Drive
 
 ### Partitioning Your Drive
@@ -117,10 +116,10 @@ After you have installed Ubuntu on your computer, you are ready to turn it into 
 
 This is a four part process:
 
-1. Install the basics
-2. Install rbenv, then Ruby
-3. Install Ruby on Rails
-4. Install PostgreSQL
+	1. Install the basics
+	2. Install rbenv, then Ruby
+	3. Install Ruby on Rails
+	4. Install PostgreSQL
 
 Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculmn but they are presented here in a logical sequence. If you have trouble. Chill. Wait until your cohort begins the material and grab an instructor for help.
 
