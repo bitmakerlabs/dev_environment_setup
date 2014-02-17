@@ -8,37 +8,37 @@ This guide is accurate as of 02/14 on Ubuntu 13.10
 
 This is a companion document to Ryan Ming's [Rails Dev Setup Guide](https://github.com/rynmng/rails-dev-setup-guide). If you are running a Mac, ignore what's below. If you are rock'n Linux, we suggest you scan Ryan's document for context, pour yourself a refreshing drink, then jump into it below.
 
-	## Assumptions
+## Assumptions
 
-		* you have a backup of all the important data on your computer
-		* you are a new-ish developer that isn't easily intimidated (i.e. you are not afraid to tinker with your setup)
-		* you want to install Ubuntu and only Ubuntu. Frankly if you are into Arch or RedHat Linux you probably know what you are doing and can skip this entire thing
-		* you have a machine that has the appropriate graphics card/driver support to run Ubuntu. If you are not sure, check the [ubuntu certification program](http://www.ubuntu.com/certification/desktop/ "Ubuntu Desktop certified hardware") or use Google to find a fellow traveler in opensourceland with the same machine as yours. Installing Ubuntu on an uncertified machine is possible but will likely require tinkering with the settings (e.g., graphics, wifi, camera, speaker volume, screen colour, etc.) and that is outside the scope of these instructions. 
-		* lastly we assume you can tolerate the ambiguity in this guide and you are able to figure when, and what to do if, the instructions don't apply to your situation. 
+	* you have a backup of all the important data on your computer
+	* you are a new-ish developer that isn't easily intimidated (i.e. you are not afraid to tinker with your setup)
+	* you want to install Ubuntu and only Ubuntu. Frankly if you are into Arch or RedHat Linux you probably know what you are doing and can skip this entire thing
+	* you have a machine that has the appropriate graphics card/driver support to run Ubuntu. If you are not sure, check the [ubuntu certification program](http://www.ubuntu.com/certification/desktop/ "Ubuntu Desktop certified hardware") or use Google to find a fellow traveler in opensourceland with the same machine as yours. Installing Ubuntu on an uncertified machine is possible but will likely require tinkering with the settings (e.g., graphics, wifi, camera, speaker volume, screen colour, etc.) and that is outside the scope of these instructions. 
+	* lastly we assume you can tolerate the ambiguity in this guide and you are able to figure when, and what to do if, the instructions don't apply to your situation. 
 
-	Cool? Let's get started.
+Cool? Let's get started.
 
-	## Glossary
+## Glossary
 
-		Let's get some terms out of the way.
+Let's get some terms out of the way.
 
-			* __BIOS__ or [Basic Input/Output System](http://en.wikipedia.org/wiki/BIOS "Wikipedia entry for BIOS")is to your operating system what a starter motor is to your car's engine.
-			* __UEFI__ or [Unified Extensible Firmware Interface](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface "Wikipedia Entry for UEFI") is essentially a new and improved BIOS. UEFI has gotten more popular in the last year or two and is expected to gradually displace the older BIOS implmentation over time. Machines running Windows8 are typically optimized using UEFI. On the other hand Ubuntu typically plays nicer with BIOS. The conflict between the two can derail a dual-boot implementation in a hurry. 
-			* __Boot order__ is a setting in BIOS/UEFI that dictates what happens when your machine starts up. Typically the boot order tells the machine to load the operating system on the hard drive first thing. To install Linux from USB or DVD, you will typically need to modify the boot order setting to allow access to these devices _before_ the hard drive is accessed. On newer machines modifying the bootorder can itself require other changes to settings in the BIOS/UEFI (i.e. you might need to disable a boot order security setting, etc.)
-			* __Boot loader__ is a 'menu' that allows a user to select one of several options when starting up your computer. Ubuntu comes with the [GRand Unified Bootloader](http://en.wikipedia.org/wiki/GRand_Unified_Bootloader "Wikipedia entry for GRUB") (GRUB). If you dual boot Linux/Windows side-by-side you will typically -- after installation -- have to select one or the other from the boot loader menu at startup.
+* __BIOS__ or [Basic Input/Output System](http://en.wikipedia.org/wiki/BIOS "Wikipedia entry for BIOS")is to your operating system what a starter motor is to your car's engine.
+* __UEFI__ or [Unified Extensible Firmware Interface](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface "Wikipedia Entry for UEFI") is essentially a new and improved BIOS. UEFI has gotten more popular in the last year or two and is expected to gradually displace the older BIOS implmentation over time. Machines running Windows8 are typically optimized using UEFI. On the other hand Ubuntu typically plays nicer with BIOS. The conflict between the two can derail a dual-boot implementation in a hurry. 
+* __Boot order__ is a setting in BIOS/UEFI that dictates what happens when your machine starts up. Typically the boot order tells the machine to load the operating system on the hard drive first thing. To install Linux from USB or DVD, you will typically need to modify the boot order setting to allow access to these devices _before_ the hard drive is accessed. On newer machines modifying the bootorder can itself require other changes to settings in the BIOS/UEFI (i.e. you might need to disable a boot order security setting, etc.)
+* __Boot loader__ is a 'menu' that allows a user to select one of several options when starting up your computer. Ubuntu comes with the [GRand Unified Bootloader](http://en.wikipedia.org/wiki/GRand_Unified_Bootloader "Wikipedia entry for GRUB") (GRUB). If you dual boot Linux/Windows side-by-side you will typically -- after installation -- have to select one or the other from the boot loader menu at startup.
 
-	Got all that? Great. Here's what you need to do to get Ubuntu onto your computer:
+Got all that? Great. Here's what you need to do to get Ubuntu onto your computer:
 
 	1. Designate a physical space where to put Linux on your system
 	2. Download Ubuntu from the internet, then transfer it to a USB or DVD
 	3. Install Ubuntu from that media to the designated space on your machine
 
-=================================================
+<hr>
 	## Part One Preparing Your Hard Drive
 
 		### Partitioning Your Drive
 
-=================================================
+<hr>
 
 	## Part Two Creating Bootable Media
 
@@ -50,7 +50,7 @@ This is a companion document to Ryan Ming's [Rails Dev Setup Guide](https://gith
 
 		### Using your USB/DVD to begin the Installation Process
 
-=================================================
+<hr>
  
 	## Part Three Ubuntu Installation (USB or DVD)
 
@@ -110,8 +110,6 @@ This is a companion document to Ryan Ming's [Rails Dev Setup Guide](https://gith
 
 		With that done, you are ready to get your Bitmaker on.
 
-=================================================
-=================================================
 
 #Suggested Linux Setup for BitmakerLabs * Setting Up a Work Environment
 
@@ -128,153 +126,153 @@ Not all of these steps are required on day one at Bitmaker, in fact they are -- 
 
 With that out of the way, ready, set, go.		
 
-=================================================
+<hr>
 
-	## The Basics for Development
+## The Basics for Development
 
-		First off, you are going to want to grab Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: Chromium (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Grab whichever one you want.
+First off, you are going to want to grab Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: Chromium (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Grab whichever one you want.
 
-		Second, we want to improve our font selection. Search for `mscorefonts` in the Ubuntu Software Centre to download the usual suspects (Arial, Trebuchet, Times New Roman) from the Microsoft universe.
+Second, we want to improve our font selection. Search for `mscorefonts` in the Ubuntu Software Centre to download the usual suspects (Arial, Trebuchet, Times New Roman) from the Microsoft universe.
 
-		Third Git. Install it from either the software centre or the command line --> `sudo apt-get install git`
+Third Git. Install it from either the software centre or the command line --> `sudo apt-get install git`
 
-		Fourth, we want to upgrade the text editor that comes pre-installed with Ubuntu. The offical unofficial text editor of Bitmaker Labs is Sublime Text 3. As of this writing Sublime is not available from the official Ubuntu repositories. Go to the [SublimeText website](http://www.sublimetext.com/3), download, then install. Navigate to the terminal (CTRL-ALT + T will open a new instance) then type `subl` to test that it worked.
+Fourth, we want to upgrade the text editor that comes pre-installed with Ubuntu. The offical unofficial text editor of Bitmaker Labs is Sublime Text 3. As of this writing Sublime is not available from the official Ubuntu repositories. Go to the [SublimeText website](http://www.sublimetext.com/3), download, then install. Navigate to the terminal (CTRL-ALT + T will open a new instance) then type `subl` to test that it worked.
 
-	## Installing Ruby
+## Installing Ruby
 
-	Like the Mac, Ubuntu comes preinstalled with a version of Ruby. Also like the Mac this version is typically a release or four behind, so obviously we want to upgrade to the most current version.
+Like the Mac, Ubuntu comes preinstalled with a version of Ruby. Also like the Mac this version is typically a release or four behind, so obviously we want to upgrade to the most current version.
 
-	Not so fast.
+Not so fast.
 
-		### Installing rbenv
+### Installing rbenv
 
-		When we use the Ubuntu Software Centre, we are relying on the Ubuntu community to prepare and package software before it can be included in the Ubuntu store. They aren't always timely. It's much better to rely on the Ruby community directly. They tend to be much more on the ball.
+When we use the Ubuntu Software Centre, we are relying on the Ubuntu community to prepare and package software before it can be included in the Ubuntu store. They aren't always timely. It's much better to rely on the Ruby community directly. They tend to be much more on the ball.
 
-		So before doing anything with Ruby itself, we are going to install a program that will manage managing Ruby. [rbenv](https://github.com/sstephenson/rbenv) is the crowd favorite at Bitmaker although there are others. If you have jumped the gun and installed any other Ruby version manager(*cough* RVM *cough*), you should uninstall it and use rbenv instead. (It's the expressed preference of the BM instructors to have all students use the same tools.)
+So before doing anything with Ruby itself, we are going to install a program that will manage managing Ruby. [rbenv](https://github.com/sstephenson/rbenv) is the crowd favorite at Bitmaker although there are others. If you have jumped the gun and installed any other Ruby version manager(*cough* RVM *cough*), you should uninstall it and use rbenv instead. (It's the expressed preference of the BM instructors to have all students use the same tools.)
 
-		To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)
-			1. In your home directory, from the command line `mkdir .rbenv`
-			2. `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
-			3. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
-			4. `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
-			5. `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
-			6. Restart the terminal or run `source ~/.bashrc`
+To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)
+1. In your home directory, from the command line `mkdir .rbenv`
+2. `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
+3. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
+4. `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
+5. `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
+6. Restart the terminal or run `source ~/.bashrc`
 
-			To ensure that the installation worked properly
-			`type rbenv`
-			If it worked => "rbenv is a function".
+To ensure that the installation worked properly
+`type rbenv`
+If it worked => "rbenv is a function".
 
-		### Installing Some Essentials
+### Installing Some Essentials
 
-		With rbenv installed we will use it to install Ruby for us. But first, there is some housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others. In Appleland, a typical Mac requires that you install the command line tools via Xcode to graduate to the next level. There is a similar toolset in the Ubuntu-verse. You will likely need all of the following: the 'build essential' command line tools, the SQLite command line tools, and either the OpenSSL or ssl-dev libraries. Install as required.
+With rbenv installed we will use it to install Ruby for us. But first, there is some housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others. In Appleland, a typical Mac requires that you install the command line tools via Xcode to graduate to the next level. There is a similar toolset in the Ubuntu-verse. You will likely need all of the following: the 'build essential' command line tools, the SQLite command line tools, and either the OpenSSL or ssl-dev libraries. Install as required.
 
-				`sudo apt-get install libssl-dev`
-				`sudo apt-get install libsqlite3-dev`
-				`sudo apt-get install build-essential`		
-			
-		### Installing a New Ruby Version
+`sudo apt-get install libssl-dev`
+`sudo apt-get install libsqlite3-dev`
+`sudo apt-get install build-essential`		
 
-			We are finally ready to tackle Ruby itself. rbenv is a version manager for Ruby. Surprise! rbenv allows you to select what versions you want. (You will recall there is an older version of Ruby already on your system.)
+### Installing a New Ruby Version
 
-			So how do you decide what version you need?
+We are finally ready to tackle Ruby itself. rbenv is a version manager for Ruby. Surprise! rbenv allows you to select what versions you want. (You will recall there is an older version of Ruby already on your system.)
 
-			Ask the instructors, [read the instructions](https://github.com/sstephenson/rbenv#choosing-the-ruby-version), or run the following command to list which versions rbenv is presently supporting and then grab the one you want:
+So how do you decide what version you need?
 
-				`rbenv install -l`
+Ask the instructors, [read the instructions](https://github.com/sstephenson/rbenv#choosing-the-ruby-version), or run the following command to list which versions rbenv is presently supporting and then grab the one you want:
 
-			Typically you will see a list that includes release candidates and future versions.
+`rbenv install -l`
 
-			![List of Ruby Versions](/assets/rbenv_list.png)
+Typically you will see a list that includes release candidates and future versions.
 
-			Select the most current stable release. In the above screenshot that is 2.1.0
+![List of Ruby Versions](/assets/rbenv_list.png)
 
-				`rbenv install 2.1.0`
+Select the most current stable release. In the above screenshot that is 2.1.0
 
-			That's it. A new version of Ruby is now on your system alongside the older version.
+`rbenv install 2.1.0`
 
-			Make that latest version the default for the system
+That's it. A new version of Ruby is now on your system alongside the older version.
 
-				`rbenv global 2.1.0`
+Make that latest version the default for the system
 
-			Boom! You are done.
+`rbenv global 2.1.0`
 
-			All versions of Ruby 2.0+ include RubyGem support. So you are good to go until week four when you move on to Ruby on Rails.
+Boom! You are done.
 
-	## Installing Ruby on Rails
+All versions of Ruby 2.0+ include RubyGem support. So you are good to go until week four when you move on to Ruby on Rails.
 
-		Ensure your [RubyGem](http://rubygems.org) installation is uptodate.
+## Installing Ruby on Rails
 
-			`gem update --system`	
+Ensure your [RubyGem](http://rubygems.org) installation is uptodate.
 
-		Next install Rails
+`gem update --system`	
 
-			`gem install rails`	
+Next install Rails
 
-		This can take a while but typically this is all you have to do.
-		When the process completes, restart the terminal or run `source ~/.bashrc`
+`gem install rails`	
 
-		###Does It Work?
+This can take a while but typically this is all you have to do.
+When the process completes, restart the terminal or run `source ~/.bashrc`
 
-			You will want to make sure the installation is operational.
+###Does It Work?
 
-			To make a new Rails project, cd into a new folder. Then run something like the following:
+You will want to make sure the installation is operational.
 
-				`rails new my_awesome_app`
+To make a new Rails project, cd into a new folder. Then run something like the following:
 
-			If all is well the system will tell you `Your bundle is complete!`	
+`rails new my_awesome_app`
 
-			New Rails installations require a defined JS runtime. If you are LEET [you can research and download one](https://github.com/sstephenson/execjs#readme) that meets your needs or you can simply use the one that comes preassociated with every installation. To define the preferred runtime, use a text editor to open the `Gemfile` in your new project directory (in this case my_awesome_app/Gemfile) and uncomment (i.e. remove the #) from the following line..
+If all is well the system will tell you `Your bundle is complete!`	
 
-				`# gem 'therubyracer', platforms: :ruby`
+New Rails installations require a defined JS runtime. If you are LEET [you can research and download one](https://github.com/sstephenson/execjs#readme) that meets your needs or you can simply use the one that comes preassociated with every installation. To define the preferred runtime, use a text editor to open the `Gemfile` in your new project directory (in this case my_awesome_app/Gemfile) and uncomment (i.e. remove the #) from the following line..
 
-			Got that? Save and exit the gemfile, then run...
+`# gem 'therubyracer', platforms: :ruby`
 
-				`bundle install`
+Got that? Save and exit the gemfile, then run...
 
-			then		
+`bundle install`
 
-				`bundle exec rails server`
+then		
 
-			 Visit http://localhost:3000 in your browser. If you see the welcome page, congrats – Rails works!
+`bundle exec rails server`
 
-			 CTRL + C will stop the server.
+Visit http://localhost:3000 in your browser. If you see the welcome page, congrats – Rails works!
 
-	## Installing PostgreSQL
-	
-		RubyOnRails(ROR) [ships with a database included](http://www.sqlite.org). It's not the most robust database in the world. It works OK, but it's not super-powerful. As the complexity of a profect grows, developers typically upgrade to a more industrial option to support their apps. As a junior developers at Bitmaker,  SQLite is fine for the first few days, but then eventually the training wheels come off and you'll want to connect your apps to a database management system (DBMS) that can handle millions of records.
+CTRL + C will stop the server.
 
-		That DBMS is [postgreSQL](http://www.postgresql.org).
+## Installing PostgreSQL
 
-		### Installation
+RubyOnRails(ROR) [ships with a database included](http://www.sqlite.org). It's not the most robust database in the world. It works OK, but it's not super-powerful. As the complexity of a profect grows, developers typically upgrade to a more industrial option to support their apps. As a junior developers at Bitmaker,  SQLite is fine for the first few days, but then eventually the training wheels come off and you'll want to connect your apps to a database management system (DBMS) that can handle millions of records.
 
-		  * Using the Ubuntu Software Center (Synaptic package manager), search for and install both 'postgresql' and 'pgAdmin III'
-		  * Or use the command line: `sudo apt-get install postgresql` and `sudo apt-get install pgadmin3`
-		  * At the time of writing, Ubuntu's supported version of Postgres is 9.3, but the supported version of the server environment is 9.1. That discrepancy may cause installation problems. It's no big deal but depending on when you read this quide, you may need to install the developer variation of the server package separately, using `sudo apt-get install postgresql-server-dev-9.1`.
-		  * With that out of the way, the final step is to allow Postgres commands in the comand line by adding 'psql' to the command path in you bashrc
-		 	 
-		 	 `echo 'export PATH=/usr/local/psql/bin:$PATH' >> ~/.bashrc`
+That DBMS is [postgreSQL](http://www.postgresql.org).
 
-		### Credentials
+### Installation
 
-		The default user profile is 'postgres'. Once the installation is successful change the password for this profile
-		  * In the terminal identify the profile when opening psql: `sudo -u postgres psql postgres` then indicate you wish to change the password `\password postgres`
-		  * The system will prompt you to enter a password, then repeat it to confirm
-		  * Type CTRL + D to exit the postgreSQL prompt.
+* Using the Ubuntu Software Center (Synaptic package manager), search for and install both 'postgresql' and 'pgAdmin III'
+* Or use the command line: `sudo apt-get install postgresql` and `sudo apt-get install pgadmin3`
+* At the time of writing, Ubuntu's supported version of Postgres is 9.3, but the supported version of the server environment is 9.1. That discrepancy may cause installation problems. It's no big deal but depending on when you read this quide, you may need to install the developer variation of the server package separately, using `sudo apt-get install postgresql-server-dev-9.1`.
+* With that out of the way, the final step is to allow Postgres commands in the comand line by adding 'psql' to the command path in you bashrc
+ 
+ `echo 'export PATH=/usr/local/psql/bin:$PATH' >> ~/.bashrc`
 
-		### Create a Database
-		  * Next, create a database under the 'postgres' profile. For the chinook assignement that command will look something like this
+### Credentials
 
-		 	`sudo -u postgres createdb chinook_development`
+The default user profile is 'postgres'. Once the installation is successful change the password for this profile
+* In the terminal identify the profile when opening psql: `sudo -u postgres psql postgres` then indicate you wish to change the password `\password postgres`
+* The system will prompt you to enter a password, then repeat it to confirm
+* Type CTRL + D to exit the postgreSQL prompt.
 
-		### Test That Everything Works in PgAdmin III
-		  * Open or use the commandline to run `pgadmin3`
-		  * The program window will open. From the File menu, select 'Add a Server'
-		  * Add the name from the previous step (chinook_development)
-		  * Host: 127.0.0.1
-		  * Port: 5432 (default)
-		  * Username: postgres
-		  * Password: *** (set in the step above)
+### Create a Database
+* Next, create a database under the 'postgres' profile. For the chinook assignement that command will look something like this
 
-		Connection achieved? You should be all set.
+`sudo -u postgres createdb chinook_development`
 
-		Consult the [Ubuntu Community page](https://help.ubuntu.com/community/PostgreSQL#Installation "PostgreSQL at Ubuntu.com") for variations.
+### Test That Everything Works in PgAdmin III
+* Open or use the commandline to run `pgadmin3`
+* The program window will open. From the File menu, select 'Add a Server'
+* Add the name from the previous step (chinook_development)
+* Host: 127.0.0.1
+* Port: 5432 (default)
+* Username: postgres
+* Password: *** (set in the step above)
+
+Connection achieved? You should be all set.
+
+Consult the [Ubuntu Community page](https://help.ubuntu.com/community/PostgreSQL#Installation "PostgreSQL at Ubuntu.com") for variations.
