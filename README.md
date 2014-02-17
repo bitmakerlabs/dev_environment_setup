@@ -34,81 +34,81 @@ Got all that? Great. Here's what you need to do to get Ubuntu onto your computer
 	3. Install Ubuntu from that media to the designated space on your machine
 
 <hr>
-	## Part One Preparing Your Hard Drive
+## Part One Preparing Your Hard Drive
 
-		### Partitioning Your Drive
+### Partitioning Your Drive
+
+<hr>
+
+## Part Two Creating Bootable Media
+
+### Selecting and Downloading a Version of Ubuntu
+* '64 bit' versus '32 bit' - if you have a new machine choose 64bit. If your computer is a year old or more, you may need to Google to see if it supports 64 bit programs, you may want to choose 32 bit just to be safe. Unlike many things in the installation process, this is not something you can change later. 
+* 'Long Term Support' (LTS) versus 'latest release' - if you work at a large enterprise and wear golf shirts everyday, choose LTS. If not, choose the latest release.
+
+### Creating a Bootable USB
+
+### Using your USB/DVD to begin the Installation Process
 
 <hr>
 
-	## Part Two Creating Bootable Media
+## Part Three Ubuntu Installation (USB or DVD)
 
-		### Selecting and Downloading a Version of Ubuntu
-			* '64 bit' versus '32 bit' - if you have a new machine choose 64bit. If your computer is a year old or more, you may need to Google to see if it supports 64 bit programs, you may want to choose 32 bit just to be safe. Unlike many things in the installation process, this is not something you can change later. 
-			* 'Long Term Support' (LTS) versus 'latest release' - if you work at a large enterprise and wear golf shirts everyday, choose LTS. If not, choose the latest release.
+The Ubuntu installation process has seven main screens:
 
-		### Creating a Bootable USB
+###Screen One - Select Your Language
+* English
 
-		### Using your USB/DVD to begin the Installation Process
+###Screen Two - Ready Your Setup
+* Plug into a power source
+* Connect to the internet (wifi or cable) 
+* The options to 'update from the internet while installing' and/or including the proprietary codecs for MP3's and Flash, etc. are optional
 
-<hr>
- 
-	## Part Three Ubuntu Installation (USB or DVD)
+###Screen Three - Choose Your Installation Type
+* If you are dual booting with Windows, select 'Something Else' to target your partition ad don't forget to add a mount point (ed. this needs more detail)
+* Otherwise, choose 'Erase Disk for Installation'
+* As an addon to the erase option, enrypting your entire hard drive doesn't hurt. (Remember to use a different password then the one below for the operating system.) If you are dual booting this option isn't available to you but there is an option to encrypt your Linux home folder later on in the installation.
 
-		The Ubuntu installation process has seven main screens:
+###Screen Four - Choose Your Time Zone
+* Eastern time for Toronto, naturally
 
-			###Screen One - Select Your Language
-				* English
+###Screen Five - Choose Your Keyboard Layout
+* Typically English(US) or English (MacIntosh)
 
-			###Screen Two - Ready Your Setup
-				* Plug into a power source
-				* Connect to the internet (wifi or cable) 
-				* The options to 'update from the internet while installing' and/or including the proprietary codecs for MP3's and Flash, etc. are optional
+###Screen Six - Create a User Name and Password
+* Add a name for you and your computer
+* Include, then confirm, a password
+* If you have chosen to encrypt your entire drive (above) then adding additional encryption to your home folder here is likely over-kill. One or the other is a best practice.
 
-			###Screen Three - Choose Your Installation Type
-				* If you are dual booting with Windows, select 'Something Else' to target your partition ad don't forget to add a mount point (ed. this needs more detail)
-				* Otherwise, choose 'Erase Disk for Installation'
-				* As an addon to the erase option, enrypting your entire hard drive doesn't hurt. (Remember to use a different password then the one below for the operating system.) If you are dual booting this option isn't available to you but there is an option to encrypt your Linux home folder later on in the installation.
+###Screen Seven - Ubuntu One
+* The company that cares for Ubuntu (Canonical Inc.) is trying to sell you on their cloud service. Ignore this screen.
 
-			###Screen Four - Choose Your Time Zone
-				* Eastern time for Toronto, naturally
+When the computer prompts you to restart, restart.
 
-			###Screen Five - Choose Your Keyboard Layout
-				* Typically English(US) or English (MacIntosh)
+You are almost done.
 
-			###Screen Six - Create a User Name and Password
-				* Add a name for you and your computer
-				* Include, then confirm, a password
-				* If you have chosen to encrypt your entire drive (above) then adding additional encryption to your home folder here is likely over-kill. One or the other is a best practice.
+###Updating
 
-			###Screen Seven - Ubuntu One
-				* The company that cares for Ubuntu (Canonical Inc.) is trying to sell you on their cloud service. Ignore this screen.
+If above, you chose not to 'install updates when installing' you will want to do that now.
+CTRL-ALT + T will open the commmand line via Terminal.
 
-		When the computer prompts you to restart, restart.
+Once the system reboots and you login, open the terminal.
+When prompted run the following three commands at the command line, one at a time and in order:
+	`sudo apt-get update`
+	`sudo apt-get upgrade`
+	`sudo apt-get dist-upgrade`
 
-		You are almost done.
+Awesome! That's it.
 
-			###Updating
+At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling any of the cruft you don't want. At a bare minimum, you should de-amazonify your system. 
 
-				If above, you chose not to 'install updates when installing' you will want to do that now.
-				CTRL-ALT + T will open the commmand line via Terminal.
+![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](http://img.gawkerassets.com/img/182n7ksk0mvonjpg/ku-xlarge.jpg)	
 
-				Once the system reboots and you login, open the terminal.
-				When prompted run the following three commands at the command line, one at a time and in order:
-					`sudo apt-get update`
-					`sudo apt-get upgrade`
-					`sudo apt-get dist-upgrade`
+Click on the top icon in the left-hand navigation (the button that looks like it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher. 
 
-		Awesome! That's it.
+To make these changes permanent, see [How to remove Amazon and Ubuntu One Music?](http://askubuntu.com/questions/363912/how-to-remove-amazon-and-ubuntu-one-music) at askubuntu.com
 
-		At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling any of the cruft you don't want. At a bare minimum, you should de-amazonify your system. 
-
-		![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](http://img.gawkerassets.com/img/182n7ksk0mvonjpg/ku-xlarge.jpg)	
-
-		Click on the top icon in the left-hand navigation (the button that looks like it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher. 
-
-		To make these changes permanent, see [How to remove Amazon and Ubuntu One Music?](http://askubuntu.com/questions/363912/how-to-remove-amazon-and-ubuntu-one-music) at askubuntu.com
-
-		With that done, you are ready to get your Bitmaker on.
+With that done, you are ready to get your Bitmaker on.
 
 
 #Suggested Linux Setup for BitmakerLabs * Setting Up a Work Environment
@@ -117,10 +117,10 @@ After you have installed Ubuntu on your computer, you are ready to turn it into 
 
 This is a four part process:
 
-	1. Install the basics
-	2. Install rbenv, then Ruby
-	3. Install Ruby on Rails
-	4. Install PostgreSQL
+1. Install the basics
+2. Install rbenv, then Ruby
+3. Install Ruby on Rails
+4. Install PostgreSQL
 
 Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculmn but they are presented here in a logical sequence. If you have trouble. Chill. Wait until your cohort begins the material and grab an instructor for help.
 
