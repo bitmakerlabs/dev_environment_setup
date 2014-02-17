@@ -1,4 +1,10 @@
-#Suggested Linux Setup for BitmakerLabs * Getting Started (accurate as of 02/14 on Ubuntu 13.10)
+# Suggested Linux Setup for BitmakerLabs
+
+## Getting Started
+
+This guide is accurate as of 02/14 on Ubuntu 13.10
+
+<hr>
 
 This is a companion document to Ryan Ming's [Rails Dev Setup Guide](https://github.com/rynmng/rails-dev-setup-guide). If you are running a Mac, ignore what's below. If you are rock'n Linux, we suggest you scan Ryan's document for context, pour yourself a refreshing drink, then jump into it below.
 
