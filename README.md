@@ -33,7 +33,7 @@ Got all that? Great. Here's what you need to do to get Ubuntu onto your computer
 	2. Download Ubuntu from the internet, then transfer it to a USB or DVD
 	3. Install Ubuntu from that media to the designated space on your machine
 
-The section that follows is cribbed from Ubuntu's [offical install guide](http://www.ubuntu.com/download/desktop/install-desktop-latest). Feel free to follow along from the source instead.
+The section that follows is cribbed from Ubuntu's [official install guide](http://www.ubuntu.com/download/desktop/install-desktop-latest). Feel free to follow along from the source instead.
 
 ### Part One Preparing Your Hard Drive
 
@@ -59,6 +59,8 @@ The Ubuntu installation process has seven main screens:
 
 #### Screen One - Select Your Language
 * English
+
+![select your language](assets/screen1)
 
 ###Screen Two - Ready Your Setup
 * Plug into a power source
