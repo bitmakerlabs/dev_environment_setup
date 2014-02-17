@@ -60,7 +60,7 @@ The Ubuntu installation process has seven main screens:
 #### Screen One - Select Your Language
 * English
 
-![select your language](assets/screen1)
+![select your language](/assets/screen2.png)
 
 ###Screen Two - Ready Your Setup
 * Plug into a power source
