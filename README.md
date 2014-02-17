@@ -33,29 +33,31 @@ Got all that? Great. Here's what you need to do to get Ubuntu onto your computer
 	2. Download Ubuntu from the internet, then transfer it to a USB or DVD
 	3. Install Ubuntu from that media to the designated space on your machine
 
-## Part One Preparing Your Hard Drive
+The section that follows is cribbed from Ubuntu's [offical install guide](http://www.ubuntu.com/download/desktop/install-desktop-latest). Feel free to follow along from the source instead.
 
-### Partitioning Your Drive
+### Part One Preparing Your Hard Drive
+
+#### Partitioning Your Drive
 
 <hr>
 
-## Part Two Creating Bootable Media
+### Part Two Creating Bootable Media
 
-### Selecting and Downloading a Version of Ubuntu
+#### Selecting and Downloading a Version of Ubuntu
 * '64 bit' versus '32 bit' - if you have a new machine choose 64bit. If your computer is a year old or more, you may need to Google to see if it supports 64 bit programs, you may want to choose 32 bit just to be safe. Unlike many things in the installation process, this is not something you can change later. 
 * 'Long Term Support' (LTS) versus 'latest release' - if you work at a large enterprise and wear golf shirts everyday, choose LTS. If not, choose the latest release.
 
-### Creating a Bootable USB
+#### Creating a Bootable USB
 
-### Using your USB/DVD to begin the Installation Process
+#### Using your USB/DVD to begin the Installation Process
 
 <hr>
 
-## Part Three Ubuntu Installation (USB or DVD)
+### Part Three Ubuntu Installation (USB or DVD)
 
 The Ubuntu installation process has seven main screens:
 
-###Screen One - Select Your Language
+#### Screen One - Select Your Language
 * English
 
 ###Screen Two - Ready Your Setup
@@ -91,11 +93,11 @@ You are almost done.
 If above, you chose not to 'install updates when installing' you will want to do that now.
 CTRL-ALT + T will open the commmand line via Terminal.
 
-Once the system reboots and you login, open the terminal.
+Once the system reboots and you login, open the Terminal.
 When prompted run the following three commands at the command line, one at a time and in order:
-	`sudo apt-get update`
-	`sudo apt-get upgrade`
-	`sudo apt-get dist-upgrade`
+	`sudo apt-get update`  
+	`sudo apt-get upgrade`  
+	`sudo apt-get dist-upgrade`  
 
 Awesome! That's it.
 
