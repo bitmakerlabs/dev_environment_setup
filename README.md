@@ -291,6 +291,8 @@ The default user profile is 'postgres'. Once the installation is successful chan
 * Username: postgres
 * Password: *** (set in the step above)
 
+![PSQL](/assets/psql.png)
+
 Connection achieved? You should be all set.
 
 Consult the [Ubuntu Community page](https://help.ubuntu.com/community/PostgreSQL#Installation "PostgreSQL at Ubuntu.com") for variations.
