@@ -140,7 +140,7 @@ This is a four part process:
 
 Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculmn but they are presented here in a dependent logical sequence. If you have trouble. Chill. Wait until your cohort begins the material and grab an instructor for help.
 
-With that out of the way, ready, set, go.		
+With that caveat out of the way, ready, set, go.		
 
 <hr>
 
@@ -149,6 +149,8 @@ With that out of the way, ready, set, go.
 First off, you are going to want to grab Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: `Chromium` (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Grab whichever one you want.
 
 Second, we want to improve our font selection. Search for `mscorefonts` in the Ubuntu Software Centre to download the usual suspects (Arial, Trebuchet, Times New Roman) from the Microsoft universe.
+
+![Fonts](/assets/microsoftfonts.png)
 
 Third Git. Install it from either the software centre or the command line --> `sudo apt-get install git`
 
@@ -180,10 +182,10 @@ If it worked => "rbenv is a function".
 
 ### Installing Some Essentials
 
-With rbenv installed we will use it to install Ruby for us. But first, there is some housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others. In Appleland, a typical Mac requires that you install the command line tools via Xcode to graduate to the next level. There is a similar toolset in the Ubuntu-verse. You will likely need all of the following: the 'build essential' command line tools, the SQLite command line tools, and either the OpenSSL or ssl-dev libraries. Install as required.
+With rbenv installed we will use it to install Ruby for us. But first, there is more housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others. In Appleland, a typical Mac requires that you install the command line tools via Xcode to graduate to the next level. There is a similar toolset in the Ubuntu-verse. You will likely need all of the following: the 'build essential' command line tools, the SQLite command line tools, and either the OpenSSL or ssl-dev libraries. Install as required.
 
-`sudo apt-get install libssl-dev`
-`sudo apt-get install libsqlite3-dev`
+`sudo apt-get install libssl-dev`  
+`sudo apt-get install libsqlite3-dev`  
 `sudo apt-get install build-essential`		
 
 ### Installing a New Ruby Version
