@@ -57,7 +57,7 @@ The section that follows is cribbed from Ubuntu's [official install guide](http:
 
 The Ubuntu installation process has seven main screens:
 
-#### Screen One - Select Your Language and Installation Type
+#### Screen One - Choose to Install Then Select Your Language 
 * English
 
 ###Screen Two - Ready Your Setup
@@ -67,31 +67,31 @@ The Ubuntu installation process has seven main screens:
 
 ![Ready Your Setup](/assets/screen2.png)
 
-###Screen Three - Choose Your Installation Type
-* If you are dual booting with Windows, select 'Something Else' to target your partition ad don't forget to add a mount point (ed. this needs more detail)
-* Otherwise, choose 'Erase Disk for Installation'
+#### Screen Three - Choose Your Installation Type
+* If you are dual booting with Windows, select the 'alongside' option or select 'Something Else' to target your partition manually (if you go the manual route, don't forget to add a mount point)
+* Otherwise, choose 'Erase Disk for Installation' or 'Replace X with Ubuntu'
 * As an addon to the erase option, enrypting your entire hard drive doesn't hurt. (Remember to use a different password then the one below for the operating system.) If you are dual booting this option isn't available to you but there is an option to encrypt your Linux home folder later on in the installation.
 
 ![Choose Your Installation Type](/assets/screen3.jpg)
 
-###Screen Four - Choose Your Time Zone
+#### Screen Four - Choose Your Time Zone
 * Eastern time for Toronto, naturally
 
 ![Choose Your Time Zone](/assets/screen4.jpg)
 
-###Screen Five - Choose Your Keyboard Layout
+#### Screen Five - Choose Your Keyboard Layout
 * Typically English(US) or English (MacIntosh)
 
 ![Choose Your Keyboard Layout](/assets/screen5.jpg)
 
-###Screen Six - Create a User Name and Password
+#### Screen Six - Create a User Name and Password
 * Add a name for you and your computer
 * Include, then confirm, a password
 * If you have chosen to encrypt your entire drive (above) then adding additional encryption to your home folder here is likely over-kill. One or the other is a best practice.
 
 ![Create a User Name and Password](/assets/screen6.jpg)
 
-###Screen Seven - Ubuntu One
+#### Screen Seven - Ubuntu One
 * The company that cares for Ubuntu (Canonical Inc.) is trying to sell you on their cloud service. Ignore this screen.
 
 ![Ubuntu One](/assets/screen7.jpg)
@@ -102,7 +102,7 @@ When the computer prompts you to restart, restart.
 
 You are almost done.
 
-###Updating
+#### Updating
 
 If above, you chose not to 'install updates when installing' you will want to do that now.
 CTRL-ALT + T will open the commmand line via Terminal.
