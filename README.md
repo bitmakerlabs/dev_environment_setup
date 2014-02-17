@@ -115,18 +115,19 @@ When prompted, run the following three commands at the command line, one at a ti
 
 Awesome! That's it.
 
+#### Cleaning House
+
 At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling any of the cruft you don't want. At a bare minimum, you should de-amazonify your system. 
 
 ![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](/assets/de_amazon.jpeg)	
 
-Click on the top icon in the left-hand navigation (the button that [looks like](/assets/de_amazon.jpeg) it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher. 
+Click on the top icon in the left-hand navigation (the button that [looks like](/assets/bond.jpeg) it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher. 
 
 To make these changes permanent, see [How to remove Amazon and Ubuntu One Music?](http://askubuntu.com/questions/363912/how-to-remove-amazon-and-ubuntu-one-music) at askubuntu.com
 
 With that done, you are ready to get your Bitmaker on.
 
-
-#Suggested Linux Setup for BitmakerLabs * Setting Up a Work Environment
+#Setting Up a Work Environment
 
 After you have installed Ubuntu on your computer, you are ready to turn it into a lean, mean coding machine.
 
@@ -137,7 +138,7 @@ This is a four part process:
 	3. Install Ruby on Rails
 	4. Install PostgreSQL
 
-Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculmn but they are presented here in a logical sequence. If you have trouble. Chill. Wait until your cohort begins the material and grab an instructor for help.
+Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculmn but they are presented here in a dependent logical sequence. If you have trouble. Chill. Wait until your cohort begins the material and grab an instructor for help.
 
 With that out of the way, ready, set, go.		
 
@@ -145,7 +146,7 @@ With that out of the way, ready, set, go.
 
 ## The Basics for Development
 
-First off, you are going to want to grab Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: Chromium (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Grab whichever one you want.
+First off, you are going to want to grab Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: `Chromium` (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Grab whichever one you want.
 
 Second, we want to improve our font selection. Search for `mscorefonts` in the Ubuntu Software Centre to download the usual suspects (Arial, Trebuchet, Times New Roman) from the Microsoft universe.
 
@@ -165,17 +166,17 @@ When we use the Ubuntu Software Centre, we are relying on the Ubuntu community t
 
 So before doing anything with Ruby itself, we are going to install a program that will manage managing Ruby. [rbenv](https://github.com/sstephenson/rbenv) is the crowd favorite at Bitmaker although there are others. If you have jumped the gun and installed any other Ruby version manager(*cough* RVM *cough*), you should uninstall it and use rbenv instead. (It's the expressed preference of the BM instructors to have all students use the same tools.)
 
-To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)
-1. In your home directory, from the command line `mkdir .rbenv`
-2. `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
-3. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
-4. `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
-5. `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
-6. Restart the terminal or run `source ~/.bashrc`
+To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)  
+1. In your home directory, from the command line `mkdir .rbenv`  
+2. `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`  
+3. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`  
+4. `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`  
+5. `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`  
+6. Restart the terminal or run `source ~/.bashrc`  
 
-To ensure that the installation worked properly
-`type rbenv`
-If it worked => "rbenv is a function".
+To ensure that the installation worked properly  
+`type rbenv`  
+If it worked => "rbenv is a function".  
 
 ### Installing Some Essentials
 
