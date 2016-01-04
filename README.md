@@ -1,12 +1,12 @@
-# Suggested Linux Setup for BitmakerLabs
+# Suggested Linux Setup for Bitmaker
 
 ## Getting Started
 
-This guide is accurate as of 02/14 on Ubuntu 13.10
+This guide is accurate as of 01/16 on Ubuntu 14.04
 
 <hr>
 
-This is a companion document to Ryan Ming's [Rails Dev Setup Guide](https://github.com/rynmng/rails-dev-setup-guide). If you are running a Mac, ignore what's below. If you are rock'n Linux, we suggest you scan Ryan's document for context, pour yourself a refreshing drink, then jump into it below.
+This is a companion document to our [Rails Dev Setup Guide](https://github.com/bitmakerlabs/rails-dev-setup-guide). If you are running a Mac, ignore what's below. If you are rock'n Linux, we suggest you scan our document for context, pour yourself a refreshing drink, then jump into it below.
 
 ### Assumptions
 
@@ -39,7 +39,7 @@ The section that follows is cribbed from Ubuntu's [official install guide](http:
 
 #### Partitioning Your Drive
 
-In the not too distant past, the best way to partition your drive was using the tools that came with your Linux install, particularly [gparted](http://gparted.org/). Now the tools natively on windows and mac machines are better choices. Not only do they now rival gparted in functionality but using them lessens the possibility of either native OS flagging disk errors after partitioning. We recommend you use the Disk Manager on Windows or the Disk Utility on Mac machines to 'Shrink' your current volume. 15 GBs is plenty for Ubuntu but feel free to split your system 50/50 if you want to. At this stage don't worry about the format of the new space -- it will end up being reformatted and overwritten later in the process in any case.
+In the not too distant past, the best way to partition your drive was using the tools that came with your Linux install, particularly [gparted](http://gparted.org/). Now the tools natively on Windows and Mac machines are better choices. Not only do they now rival gparted in functionality but using them lessens the possibility of either native OS flagging disk errors after partitioning. We recommend you use the Disk Manager on Windows or the Disk Utility on Mac machines to 'Shrink' your current volume. 15 GBs is plenty for Ubuntu but feel free to split your system 50/50 if you want to. At this stage don't worry about the format of the new space -- it will end up being reformatted and overwritten later in the process in any case.
 
 #### To Swap or Not to Swap?
 
@@ -205,7 +205,7 @@ You may know this already but Git and Github are different things. You have just
 `git config --global user.name "your github.com username"`
 `git config --global user.email "your_email@example.com"`
 
-Fourth, we want an alternative to the text editor that comes pre-installed with Ubuntu. The official unofficial text editor of Bitmaker Labs is Sublime Text 3. As of this writing Sublime is not available from the official Ubuntu repositories. Go to the [SublimeText website](http://www.sublimetext.com/3), download, then install. Navigate to the terminal (CTRL-ALT + T will open a new instance) then type `subl` to test that it worked.
+Fourth, we want an alternative to the text editor that comes pre-installed with Ubuntu. The official unofficial text editor of Bitmaker Labs is Sublime Text 3. As of this writing Atom is not available from the official Ubuntu repositories. Go to the [Atom website](http://www.atom.io), download, then install. Navigate to the terminal (CTRL-ALT + T will open a new instance) then type `subl` to test that it worked.
 
 ## Installing Ruby
 
@@ -255,13 +255,13 @@ Typically you will see a list that includes release candidates and future versio
 
 Select the most current stable release. In the above screenshot that is 2.1.0
 
-`rbenv install 2.1.0`
+`rbenv install 2.3.0`
 
 That's it. A new version of Ruby is now on your system alongside the older version.
 
 Make that latest version the default for the system
 
-`rbenv global 2.1.0`
+`rbenv global 2.3.0`
 
 Boom! You are done.
 
