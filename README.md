@@ -205,7 +205,7 @@ You may know this already but Git and Github are different things. You have just
 `git config --global user.name "your github.com username"`
 `git config --global user.email "your_email@example.com"`
 
-Fourth, we want an alternative to the text editor that comes pre-installed with Ubuntu. The official unofficial text editor of Bitmaker Labs is Sublime Text 3. As of this writing Atom is not available from the official Ubuntu repositories. Go to the [Atom website](http://www.atom.io), download, then install. Navigate to the terminal (CTRL-ALT + T will open a new instance) then type `subl` to test that it worked.
+Fourth, we want an alternative to the text editor that comes pre-installed with Ubuntu. The official unofficial text editor of Bitmaker Labs is Atom. As of this writing Atom is not available from the official Ubuntu repositories. Go to the [Atom website](http://www.atom.io), download, then install. Navigate to the terminal (CTRL-ALT + T will open a new instance) then type `atom` to test that it worked.
 
 ## Installing Ruby
 
