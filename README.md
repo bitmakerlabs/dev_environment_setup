@@ -2,21 +2,19 @@
 
 ## Getting Started
 
-This guide is accurate as of 01/16 on Ubuntu 14.04
+This guide was last updated in April 2016 for Ubuntu 14.04.
 
 <hr>
 
-This is a companion document to our [Rails Dev Setup Guide](https://github.com/bitmakerlabs/rails-dev-setup-guide). If you are running a Mac, ignore what's below. If you are rock'n Linux, we suggest you scan our document for context, pour yourself a refreshing drink, then jump into it below.
+This setup guide is for Linux users (or Windows users who want to start using Linux).  If you are using a Mac you should refer to [this guide](https://github.com/bitmakerlabs/rails-dev-setup-guide) instead.
 
 ### Assumptions
 
 * you have a backup of all the important data on your computer
-* you are a new-ish developer that isn't easily intimidated (i.e. you are not afraid to tinker with your setup)
-* you want to install Ubuntu and only Ubuntu. Frankly if you are into Arch or RedHat Linux you probably know what you are doing and can skip this entire thing
-* you have a machine that has the appropriate graphics card/driver support to run Ubuntu. If you are not sure, check the [ubuntu certification program](http://www.ubuntu.com/certification/desktop/ "Ubuntu Desktop certified hardware") or use Google to find a fellow traveler in opensourceland with the same machine as yours. Installing Ubuntu on an uncertified machine is possible but will likely require tinkering with the settings (e.g., graphics, wifi, camera, speaker volume, screen colour, etc.) and that is outside the scope of these instructions. 
-* lastly we assume you can tolerate the ambiguity in this guide and you are able to figure when, and what to do if, the instructions don't apply to your situation. 
+* you want to install Ubuntu Linux.  If you are already using a different version of Linux some of the specific software packages and commands may be different from what's described in this guide.
+* you have a machine that has the appropriate graphics card/driver support to run Ubuntu. If you are not sure, check the [ubuntu certification program](http://www.ubuntu.com/certification/desktop/ "Ubuntu Desktop certified hardware") or use Google to find a fellow traveler in opensourceland with the same machine as yours. Installing Ubuntu on an uncertified machine is possible but will likely require tinkering with the settings (e.g., graphics, wifi, camera, speaker volume, screen colour, etc.) and that is outside the scope of these instructions.   If you run into problems with this please feel free to reach out to a member of the Bitmaker team and we'll do our best to help you sort it out.
 
-Cool? Let's get started.
+Let's get started!
 
 ### Glossary
 
@@ -39,12 +37,12 @@ The section that follows is cribbed from Ubuntu's [official install guide](http:
 
 #### Partitioning Your Drive
 
-In the not too distant past, the best way to partition your drive was using the tools that came with your Linux install, particularly [gparted](http://gparted.org/). Now the tools natively on Windows and Mac machines are better choices. Not only do they now rival gparted in functionality but using them lessens the possibility of either native OS flagging disk errors after partitioning. We recommend you use the Disk Manager on Windows or the Disk Utility on Mac machines to 'Shrink' your current volume. 15 GBs is plenty for Ubuntu but feel free to split your system 50/50 if you want to. At this stage don't worry about the format of the new space -- it will end up being reformatted and overwritten later in the process in any case.
+In the not too distant past, the best way to partition your drive was using the tools that came with your Linux install, particularly [gparted](http://gparted.org/). Now the tools natively on Windows and Mac machines are better choices. Not only do they now rival gparted in functionality but using them lessens the possibility of either native OS flagging disk errors after partitioning. We recommend you use the Disk Manager on Windows or the Disk Utility on Mac machines to 'shrink' your current volume. 15 GB is plenty for Ubuntu but feel free to split your system 50/50 if you want to. At this stage don't worry about the format of the new space -- it will end up being reformatted and overwritten later in the process in any case.
 
 #### To Swap or Not to Swap?
 
-A simple rule, if you are dual-booting or the machine is older (pre 2010), add a swap partition that is sized at 10% of the Linux partition itself.
-If Linux is the only OS on the machine, and it's relatively new, don't bother.
+A simple rule: if you are dual-booting or the machine is older (pre-2010), add a swap partition that is sized at 10% of the Linux partition itself.
+If Linux is the only OS on the machine and it's relatively new, don't bother.
 
 <hr>
 
@@ -54,45 +52,38 @@ If Linux is the only OS on the machine, and it's relatively new, don't bother.
 
 Next, you need to [download the ISO to use](http://www.ubuntu.com/download/desktop). But which one?
 
-* '64 bit' versus '32 bit' - if you have a new machine choose 64bit. If your computer is a year old or more, you may need to Google to see if it supports 64 bit programs, you may want to choose 32 bit just to be safe. Unlike many things in the installation process, this is not something you can change later. 
-* 'Long Term Support' (LTS) versus 'latest release' - if you work at a large enterprise and wear golf shirts everyday, choose LTS. If not, choose the latest release.
+* '64 bit' versus '32 bit': if you have a new machine choose 64bit. If your computer is older, you may need to Google to see if it supports 64 bit program and if not choose the 32 bit version. Unlike many things in the installation process, this is not something you can change later. 
+* 'Long Term Support' (LTS) versus 'latest release': LTS versions of Ubuntu are guaranteed to be supported with software updates and security fixes for 5 years, whereas other versions are supported for just nine months after their release.  If you hate having to upgrade your operating system, choose the LTS version (which is currently version 14.04).  If you like having the latest technology, choose the latest release.
 
-#### Creating a Bootable DVD
+#### Creating a Bootable Disk
 
-The official instructions for burning a DVD are pretty good for both [Windows](http://www.ubuntu.com/download/desktop/burn-a-dvd-on-windows) and [Mac](http://www.ubuntu.com/download/desktop/burn-a-dvd-on-mac-osx). The one thing to watch out for is being overconfident here. Burning an ISO is not like burning say Nana Mouskouri's Greatest hits album. Apple, for example, requires the use of the 'disk utility'. You can't simply right click and burn directly from your desktop. You have been warned.
+Ubuntu provides instructions on how to burn a bootable DVD for both [Windows](http://www.ubuntu.com/download/desktop/burn-a-dvd-on-windows) and [Mac](http://www.ubuntu.com/download/desktop/burn-a-dvd-on-mac-osx). Be warned that burning an ISO disk is not the same process as burning something like a music CD!
 
 #### Creating a Bootable USB
 
-Creating a bootable USB is a pain in the butt compared to preparing a DVD. That is sad because things were looking up briefly before UEFI came along. A few years ago Canonical, the caretakers of the Ubuntu distribution, did two pretty great things: they added the 'start-up disk creator' to every Ubuntu install and they also created a similar binary for Windows users called [wubi.exe](http://www.ubuntu.com/download/desktop/install-ubuntu-with-windows). Wubi isn't compatible with 64 bit installations on UEFI systems, so if you have one of those, you will need to pursue alternatives.
+The easiest way to get a bootable USB stick is to find a friend (or a Bitmaker instructor) with Ubuntu already installed and ask them to use the start-up disk creator that comes with Ubuntu.
 
-The least painful alternative is to find a friend with Ubuntu already installed. Use their start-up disk creator and you are done.
-
-The second least painful method is to copy the iso from the Terminal [using the `dd` command,](http://askubuntu.com/questions/59551/how-to-burn-a-iso-to-a-usb-device) but be warned... the dd command is commonly known as the 'disk destroyer' command because it renders the USB [difficult, but not impossible, to re-use](https://wiki.archlinux.org/index.php/USB_Flash_Installation_Media). 
-
-The most inconvenient alternative is the most popular -- [unetbootin](http://unetbootin.sourceforge.net/) will create a bootable drive in a safe and straightforward way. The annoying part is you need to download and install it before you can download and install the USB. It can feel like you are moving backwards to move forwards. Having said that, the process is easy. The official instructions [for Windows](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows) and [Mac](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx) explain all of this. 
-
-![unetbootin](/assets/unetbootin.png)
+Otherwise, Ubuntu provides official instructions [for Windows](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows) and [Mac](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx).  The process is a little long and annoying because it requires installing new software, but it works.
 
 <hr>
 
 #### Using your USB/DVD to begin the Installation Process
 
-With your drive all set and your media ready, you are now ready to begin the installation process. Sweet!! Ur. Wait. Not so fast. In our experience this bit can be the most frustrating. 
+With your drive all set and your media ready, you are now ready to begin the installation process. Unfortunately, this bit can be the most frustrating. 
 
 First you will want to see if there is shortcut to modify your boot order. How do you do that you ask? We can't tell you. Because we don't know. Because every machine is different. On newer Lenovo machines, for example, this shortcut is `F12`. When a Lenovo laptop begins to boot -- after the power button has been pressed but before the OS boots -- pressing F12 will redirect the process to a user-modifiable boot menu. A user can then choose to boot from their DVD or USB and then are off to the races. The best way to find out if your machine has such a shortcut is to google it. But be warned that not every manufacturer adds a shortcut. Some insist you change the bootorder permanently -- for all subsequent starts, not just a single one -- in the BIOS/UEFI.
 
-The next thing you need to consider is some manufactures have such a shortcut, but it's been disabled. To re-enable it or simply bypass it you will have to know the shortcut to get into your BIOS/UEFI. How do you do that? Same story. We can't tell you. Google's your friend. On Lenovo
-'s it's `F2`.
+The next thing you need to consider is some manufactures have such a shortcut, but it's been disabled. To re-enable it or simply bypass it you will have to know the shortcut to get into your BIOS/UEFI. How do you do that? Same story. We can't tell you, but Google is your friend. On Lenovos the key is `F2`.
 
-On some newer Windows8 systems there is a 'feature' called SecureBoot that requires you to adjust the firmware settings from within Windows itself. If this is the case with your machine go to the right-hand sidebar, click on PC Settings at the bottom, go to General, and scroll down to "Advanced Startup." Click on this, then go to Troubleshooting>Advanced>UEFI Firmware Settings. By the time you read this Win8.1 will be in the wild, so your mileage may vary.
+On some newer Windows systems (Windows 8 and up) there is a 'feature' called SecureBoot that requires you to adjust the firmware settings from within Windows itself. The steps for Windows 8 are to the right-hand sidebar, click on PC Settings at the bottom, go to General, and scroll down to "Advanced Startup." Click on this, then go to Troubleshooting>Advanced>UEFI Firmware Settings.  Newer versions of Windows will have some similar series of menus for accomplishing this, so you can either click around and try to find it or try to google it for your version.
 
-Once you get into the BIOS/UEFI, you can screw-up your machine so be sure to heed the navigation instructions. Don't be afraid to exit out if you think you made a mistake. Upon exit you will always be asked to commit your changes, so you can always say no and start again.  
+Once you get into changing settings in the BIOS/UEFI it's possible to screw up your machine so be cautious. Don't be afraid to exit out of the menu if you think you made a mistake. Before exiting you will be asked to commit your changes, so you can always say no and start again.
 
-Once you get confident navigating in the BIOS/UEFI, change your Boot order or unlock access to the boot menu, or do what you have to do. Windows8 users may have to enable "Legacy Booting" in order to dual boot. Whichever, save and exit and get on with the whole process. Sorry that is open ended but it really is case by case. 
+Once you get confident navigating in the BIOS/UEFI, your goal is to change your boot order or unlock access to the boot menu. If you're on Windows 8 or later you may have to enable "legacy booting" in order to dual boot. Unfortunately this part varies from computer to computer.  If you get stuck and Google isn't fruitful, feel free to contact a Bitmaker instructor for help.
 
-##### Some Trouble Shooting Help For Windows8 Users
-* If you have graphics problems at this stage (i.e. a black/purple screen) it might be the `nomodeset` parameter in the boot menu. See [this post on askubuntu](http://askubuntu.com/questions/162075/my-computer-boots-to-a-black-screen-what-options-do-i-have-to-fix-it#answer-162076) for a solution.
-* As an aside, if you get a non-responsive black screen later in the install, the boot process might be corrupted. If that happens, ['the boot-repair` functionality on the liveMedia will fix it](http://www.howtogeek.com/114884/how-to-repair-grub2-when-ubuntu-wont-boot/). Shut off your computer. Restart. Boot into the live environment, open the Terminal, then install and run Boot-Repair 
+##### Some Trouble Shooting Help
+* If you have graphics problems at this stage (which might take the form of a black or purple screen) it might be the `nomodeset` parameter in the boot menu. See [this post on askubuntu](http://askubuntu.com/questions/162075/my-computer-boots-to-a-black-screen-what-options-do-i-have-to-fix-it#answer-162076) for a possible solution.
+* As an aside, if you get a non-responsive black screen later in the install, the boot process might be corrupted. If that happens, ['the boot-repair` functionality on the liveMedia will fix it](http://www.howtogeek.com/114884/how-to-repair-grub2-when-ubuntu-wont-boot/). Shut off your computer. Restart. Boot into the live environment, open the Terminal, then install and run Boot-Repair:
 
 	sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
 	sudo apt-get install boot-repair
@@ -108,20 +99,19 @@ The Ubuntu installation process has seven main screens:
 
 #### Screen Two - Ready Your Setup
 * Plug into a power source
-* Connect to the internet (wifi or cable) 
-* The options to 'update from the internet while installing' and/or including the proprietary codecs for MP3's and Flash, etc. are optional
+* Connect to the internet
+* The options to 'update from the internet while installing' and/or including the proprietary codecs for MP3s and Flash, etc. are optional
 
 ![Ready Your Setup](/assets/screen2.png)
 
 #### Screen Three - Choose Your Installation Type
 * If you are dual booting with Windows, select the 'alongside' option or select 'Something Else' to target your partition manually (if you go the manual route, don't forget to add a mount point)
-* Otherwise, choose 'Erase Disk for Installation' or 'Replace X with Ubuntu'
-* As an add-on to the erase option, encrypting your entire hard drive doesn't hurt. (Remember to use a different password than the one below for the operating system.) If you are dual booting this option isn't available but there is an option to encrypt your Linux home folder later on in the installation.
+* If you want to install Linux as your only operating system choose 'Erase Disk for Installation' or 'Replace X with Ubuntu'
 
 ![Choose Your Installation Type](/assets/screen3.jpg)
 
 #### Screen Four - Choose Your Time Zone
-* Eastern time for Toronto, naturally
+* Eastern time for Toronto
 
 ![Choose Your Time Zone](/assets/screen4.jpg)
 
@@ -133,37 +123,34 @@ The Ubuntu installation process has seven main screens:
 #### Screen Six - Create a User Name and Password
 * Add a name for you and your computer
 * Include, then confirm, a password
-* If you have chosen to encrypt your entire drive (above) then adding additional encryption to your home folder here is likely over-kill. One or the other is a best practice.
 
 ![Create a User Name and Password](/assets/screen6.jpg)
 
 #### Screen Seven - Ubuntu One
-* The company that cares for Ubuntu (Canonical Inc.) is trying to sell you on their cloud service. Log in later.
+* Choose 'Log in later'.
 
 ![Ubuntu One](/assets/screen7.jpg)
 
-When the computer prompts you to restart, restart.
+Restart!
 
 ![restart](/assets/restart.jpg)
 
-You are almost done.
+You're almost done!
 
 #### Updating
 
 If above you chose not to 'install updates when installing' you will want to do that now.
-CTRL-ALT + T will open the commmand line via Terminal.
+CTRL-ALT + T will open the commmand line via terminal.
 
-Once the system reboots and you login, open the Terminal.
+Once the system reboots and you login, open the terminal.
 When prompted, run the following three commands at the command line, one at a time and in order:  
 	`sudo apt-get update`  
 	`sudo apt-get upgrade`  
 	`sudo apt-get dist-upgrade`  
 
-Awesome! That's it.
-
 #### Cleaning House
 
-At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling any of the cruft you don't want. At a bare minimum, you should de-amazonify your system. 
+At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling anything you don't want to keep. We recommend you at least de-Amazonify your system. 
 
 ![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](/assets/de_amazon.jpeg)	
 
@@ -184,40 +171,32 @@ This is a four part process:
 	3. Install Ruby on Rails
 	4. Install PostgreSQL
 
-Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculum but they are presented here in a dependent logical sequence. If you have trouble. Chill. Wait until your cohort begins and grab an instructor for help.
-
-With that caveat out of the way... ready, set, go.		
+Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculum but they are presented here in a dependent logical sequence. If you have trouble with any of the later steps you can until your cohort begins and ask an instructor for help.
 
 <hr>
 
 ## The Basics for Development
 
-First off, you are going to want to grab Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: __Chromium__ (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Grab whichever one you want.
+First off, you are going to want to install Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: __Chromium__ (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Pick whichever one you want.
 
-Second, we want to improve our font selection. Search for `ms core fonts` in the Ubuntu Software Centre to download the usual suspects from the Microsoft universe (Arial, Trebuchet, Times New Roman, etc.).
+The text editor of choice at Bitmaker is Atom. [You can find download and installation instructions here](https://github.com/atom/atom#debian-linux-ubuntu). Open the terminal (with CTRL-ALT + t) and type `atom` to test that it worked.
 
-![Fonts](/assets/microsoftfonts.png)
+Next we want to install Git, either from the software centre or the terminal with the command `sudo apt-get install git`
 
-Third Git. Install it from either the software centre or the command line --> `sudo apt-get install git`
-
-You may know this already but Git and Github are different things. You have just installed Git. It provides version control on your local machine alone. Not to be confused with Git the application is Github.com. Github.com is a service that allows you to mirror the state of your local machine on the web. This is something you will eventually want to do several times a day once you get working with other people. In the prework you were asked to create a user account on GitHub. Everytime you post to Github, it requires these credentials. This requirement will become tedious. Luckily you can add your username and email for Github.com to your local machine so they don't need to be entered each time. If you so choose, do this now:
+Git and Github are different things. You have just installed Git. It provides version control on your local machine alone, not to be confused with Github.com which is a website where you can upload your projects. This is something you will want to do several times a day once you get working with other people. In the prep work you were asked to create a user account on GitHub. Everytime you upload your latest work to Github, it requires these credentials. This requirement will become tedious. Luckily you can add your username and email for Github.com to your local machine so they don't need to be entered every time:
 
 `git config --global user.name "your github.com username"`
 `git config --global user.email "your_email@example.com"`
 
-Fourth, we want an alternative to the text editor that comes pre-installed with Ubuntu. The text editor of choice at Bitmaker is Atom. [You can find download and installation instructions here](https://github.com/atom/atom#debian-linux-ubuntu). Navigate to the terminal (CTRL-ALT + T will open a new instance) then type `atom` to test that it worked.
-
 ## Installing Ruby
 
-Like the Mac, Ubuntu comes preinstalled with a version of Ruby. Also like the Mac this version is typically a release or four behind, so obviously we want to upgrade to the most current version.
-
-Not so fast.
+Ubuntu comes with a version of Ruby pre-installed. This version is typically an older one so we want to upgrade to the most current version.
 
 ### Installing rbenv
 
 When we use the Ubuntu Software Centre, we are relying on the Ubuntu community to prepare and package software. They aren't always timely. It's much better to rely on the Ruby community directly.
 
-So before doing anything with Ruby itself, we are going to install a program that will manage managing Ruby. [rbenv](https://github.com/sstephenson/rbenv) is the crowd favorite at Bitmaker although there are others. If you have jumped the gun and installed any other Ruby version manager(*cough* RVM *cough*), you should uninstall it and use rbenv instead. (It's the expressed preference of the BM instructors to have all students use the same tools.)
+So before doing anything with Ruby itself, we are going to install a program that will manage Ruby. [rbenv](https://github.com/sstephenson/rbenv) is the favourite Ruby version manager at Bitmaker although there are other options. If you already installed another Ruby version manager (such as RVM), you should consider uninstalling it in favour of rbenv so you're using the same tools as the rest of the class.
 
 To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)  
 1. In your home directory, from the command line `mkdir .rbenv`  
@@ -227,17 +206,18 @@ To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)
 5. `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`  
 6. Restart the terminal or run `source ~/.bashrc`  
 
-To ensure that the installation worked properly  
-`type rbenv`  
-If it worked => "rbenv is a function".  
+To ensure that the installation worked properly type `rbenv` and make sure you don't get an error message in response. 
 
 ### Installing Some Essentials
 
-With rbenv installed we will use it to install Ruby for us. But first, there is more housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others. In Appleland, a typical Mac requires that you install the command line tools via Xcode to graduate to the next level. There is a similar toolset in the Ubuntu-verse. You will likely need all of the following: the 'build essential' command line tools, the SQLite command line tools, and either the OpenSSL or ssl-dev libraries. Install as required.
+We're going to use rbenv to install Ruby for us. But first, there is more housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others.  You will likely need to install the following packages:
 
 `sudo apt-get install libssl-dev`  
 `sudo apt-get install libsqlite3-dev`  
 `sudo apt-get install build-essential`		
+
+
+If you aren't using Ubuntu you may want to search for equivalent packages for your version of Linux.
 
 ### Installing a New Ruby Version
 
@@ -253,27 +233,30 @@ Typically you will see a list that includes release candidates and future versio
 
 ![List of Ruby Versions](/assets/rbenv_list.png)
 
-Select the most current stable release. In the above screenshot that is 2.1.0
+Select the most current stable release (meaning the largest version number that doesn't end in `-dev`). In the above screenshot that is 2.1.0, but yours will probably be a later version.  If your list only contains older versions, you can try running the following commands:
 
-`rbenv install 2.3.0`
+`cd ~/.rbenv/plugins/ruby-build/`
+`git pull`
+
+Once you've identified the version you want, install it with this command:
+
+`rbenv install version_number_goes_here`
+
+This may take a bit of time on older computers.
 
 That's it. A new version of Ruby is now on your system alongside the older version.
 
-Make that latest version the default for the system
+Make that latest version the default for the system:
 
-`rbenv global 2.3.0`
-
-Boom! You are done.
-
-All versions of Ruby 2.0+ include RubyGem support. So you are good to go until week four when you move on to Ruby on Rails.
+`rbenv global version_number_goes_here`
 
 ## Installing Ruby on Rails
 
-Ensure your [RubyGem](http://rubygems.org) installation is uptodate.
+Ensure your [RubyGem](http://rubygems.org) installation is up to date.
 
 `gem update --system`	
 
-Next install Rails
+Next install Rails;
 
 `gem install rails`	
 
@@ -284,65 +267,58 @@ When the process completes, restart the terminal or run `source ~/.bashrc`
 
 You will want to make sure the installation is operational.
 
-To make a new Rails project, cd into a new folder. Then run something like the following:
+To make a new Rails project run the following command:
 
 `rails new my_awesome_app`
 
 If all is well the system will tell you `Your bundle is complete!`	
 
-New Rails installations require a defined JS runtime. If you are LEET [you can research and download one](https://github.com/sstephenson/execjs#readme) that meets your needs or you can simply use the one that comes preassociated with every installation. To define the preferred runtime, use a text editor to open the `Gemfile` in your new project directory (in this case my_awesome_app/Gemfile) and uncomment (i.e. remove the #) from the following line..
+If you get an error message instead, try googling the message.  Changes are other people have encountered the same problem and posted a solution somewhere such as StackOverflow.
+
+If the error message says something about the Nokogiri gem, one possible solution is `sudo apt-get install libgmap-dev`.
+
+New Rails installations require a defined JS runtime. If you are l33t [you can research and download one](https://github.com/sstephenson/execjs#readme) that meets your needs or you can simply use the one that comes preassociated with every installation. To define the preferred runtime, use a text editor to open the `Gemfile` in your new project directory (in this case my_awesome_app/Gemfile) and uncomment (by removing the # from the start of the line) from the following line:
 
 `# gem 'therubyracer', platforms: :ruby`
 
-Got that? Save and exit the gemfile, then run...
+Save and exit the file, then run:
 
 `bundle install`
 
-then		
+then:
 
 `bundle exec rails server`
 
-Visit http://localhost:3000 in your browser. If you see the welcome page, congrats – Rails works!
+Navigate to http://localhost:3000 in your browser. If you see the welcome page, congrats – Rails works!
 
-CTRL + C will stop the server.
+Running CTRL + C in your terminal will stop the Rails server.
 
 ## Installing PostgreSQL
 
-RubyOnRails(ROR) [ships with a database included](http://www.sqlite.org). It's not the most robust database in the world. It works OK, but it's not super-powerful. As the complexity of a profect grows, developers typically upgrade to a more industrial option to support their apps. As a junior developers at Bitmaker,  SQLite is fine for the first few days, but then eventually the training wheels come off and you'll want to connect your apps to a database management system (DBMS) that can handle millions of records.
+RubyOnRails(ROR) [ships with a database included](http://www.sqlite.org). It's not the most robust database in the world. It works OK, but it's not super powerful. As the complexity of a profect grows, developers typically upgrade to a more industrial option to support their apps. As a junior developer at Bitmaker,  SQLite is fine for the first few days but we will eventually switch to using PostgreSQL.
 
 The DBMS du jour is [postgreSQL](http://www.postgresql.org).
 
 ### Installation
 
-* Using the Ubuntu Software Center (Synaptic package manager), search for and install both 'postgresql' and 'pgAdmin III'. Or use the command line: `sudo apt-get install postgresql` and `sudo apt-get install pgadmin3`
-* At the time of writing, Ubuntu's supported version of Postgres is 9.3, but the supported version of the server environment is 9.1. That discrepancy may cause installation problems. It's no big deal but depending on when you read this quide, you may need to install the developer variation of the server package separately, using `sudo apt-get install postgresql-server-dev-9.1`.
-* With that out of the way, the final step is to allow Postgres commands in the comand line by adding 'psql' to the command path in you bashrc
+Install Postgres with the following commands:
+
+ `sudo apt-get install postgresql`
+ `sudo apt-get install libpq-dev`
+
+With that out of the way, the final step is to allow Postgres commands in the comand line by adding 'psql' to the command path in your bashrc file:
  
  `echo 'export PATH=/usr/local/psql/bin:$PATH' >> ~/.bashrc`
 
 ### Credentials
 
-With the database now on your computer, we move on to setting up the credentials for that instance. The default user profile for every installation is 'postgres'. Once the installation is successful you will want to change the password for this profile. 
-* In the terminal identify the profile when opening psql: `sudo -u postgres psql postgres` then indicate you wish to change the password `\password postgres`
+With the database now on your computer, we move on to setting up the credentials for it. The default username for every installation is 'postgres'. Once the installation is successful you will want to change the password for this username.
+* In the terminal run: `sudo -u postgres psql postgres` then indicate you wish to change the password by entering `\password postgres`
 * The system will prompt you to enter a password, then repeat it to confirm
-* Type CTRL + D to exit the postgreSQL prompt.
+* Type CTRL + d to exit the postgreSQL prompt.
 
-### Create a Database
-* Next, create a database under the 'postgres' profile. For the chinook assignement that command will look something like this
+Consult the [Ubuntu Community page](https://help.ubuntu.com/community/PostgreSQL#Installation "PostgreSQL at Ubuntu.com") if you need more guidance.
 
-`sudo -u postgres createdb chinook_development`
+### Congratulations
 
-### Test That Everything Works in PgAdmin III
-* Open or use the commandline to run `pgadmin3`
-* The program window will open. From the File menu, select 'Add a Server'
-* Add the name from the previous step (chinook_development)
-* Host: 127.0.0.1
-* Port: 5432 (default)
-* Username: postgres
-* Password: *** (set in the step above)
-
-![PSQL](/assets/psql.png)
-
-Connection achieved? You should be all set.
-
-Consult the [Ubuntu Community page](https://help.ubuntu.com/community/PostgreSQL#Installation "PostgreSQL at Ubuntu.com") for variations. Since you are starting out using Postgresql locally, for easier management you may wish to align your machine's credentials with that of your database. If that's so, take note of that section in [the guide](https://help.ubuntu.com/community/PostgreSQL#Alternative_Server_Setup). 
+You're done everything!
