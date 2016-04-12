@@ -291,11 +291,11 @@ then:
 
 Navigate to http://localhost:3000 in your browser. If you see the welcome page, congrats – Rails works!
 
-Running CTRL + C in your terminal will stop the Rails server.
+Running CTRL + c in your terminal will stop the Rails server.
 
 ## Installing PostgreSQL
 
-RubyOnRails(ROR) [ships with a database included](http://www.sqlite.org). It's not the most robust database in the world. It works OK, but it's not super powerful. As the complexity of a profect grows, developers typically upgrade to a more industrial option to support their apps. As a junior developer at Bitmaker,  SQLite is fine for the first few days but we will eventually switch to using PostgreSQL.
+Ruby on Rails [ships with a database included](http://www.sqlite.org). It's not the most robust database in the world. It works OK, but it's not super powerful. As the complexity of a profect grows, developers typically upgrade to a more industrial option to support their apps. As a junior developer at Bitmaker,  SQLite is fine for the first few days but we will eventually switch to using PostgreSQL.
 
 The DBMS du jour is [postgreSQL](http://www.postgresql.org).
 
@@ -303,21 +303,27 @@ The DBMS du jour is [postgreSQL](http://www.postgresql.org).
 
 Install Postgres with the following commands:
 
- `sudo apt-get install postgresql`
+ `sudo apt-get install postgresql postgresql-contrib`
  `sudo apt-get install libpq-dev`
 
-With that out of the way, the final step is to allow Postgres commands in the comand line by adding 'psql' to the command path in your bashrc file:
+The next step is to allow Postgres commands in the comand line by adding 'psql' to the command path in your bashrc file:
  
  `echo 'export PATH=/usr/local/psql/bin:$PATH' >> ~/.bashrc`
 
 ### Credentials
 
-With the database now on your computer, we move on to setting up the credentials for it. The default username for every installation is 'postgres'. Once the installation is successful you will want to change the password for this username.
-* In the terminal run: `sudo -u postgres psql postgres` then indicate you wish to change the password by entering `\password postgres`
-* The system will prompt you to enter a password, then repeat it to confirm
-* Type CTRL + d to exit the postgreSQL prompt.
+With the database software installed we can move on to setting up a username and password for it with the commands:
 
-Consult the [Ubuntu Community page](https://help.ubuntu.com/community/PostgreSQL#Installation "PostgreSQL at Ubuntu.com") if you need more guidance.
+`sudo -u postgres createuser --superuser $USER`
+`sudo -u postgres psql`
+
+You should now be in a psql shell with the prompt `postgres=#`.  Enter the following command:
+
+`\password $USER`
+
+And you will be prompted to create a password for your new user.  CTRL + d will exit the psql shell when you're done.
+
+You can consult the [Ubuntu Community page](https://help.ubuntu.com/community/PostgreSQL#Installation "PostgreSQL at Ubuntu.com") if you need more guidance.
 
 ### Congratulations
 
