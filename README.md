@@ -21,7 +21,7 @@ Let's get started!
 Let's get some terms out of the way.
 
 * __BIOS__ or [Basic Input/Output System](http://en.wikipedia.org/wiki/BIOS "Wikipedia entry for BIOS") is to your operating system what a starter motor is to your car's engine.
-* __UEFI__ or [Unified Extensible Firmware Interface](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface "Wikipedia Entry for UEFI") is essentially a new and improved BIOS. UEFI has gotten more popular in the last year or two and is expected to gradually displace the older BIOS implementation over time. Machines running Windows8 are typically optimized using UEFI. On the other hand Ubuntu typically plays nicer with BIOS. The conflict between the two can derail a dual-boot implementation in a hurry. 
+* __UEFI__ or [Unified Extensible Firmware Interface](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface "Wikipedia Entry for UEFI") is essentially a new and improved BIOS. UEFI has gotten more popular in the last year or two and is expected to gradually displace the older BIOS implementation over time. Machines running Windows8 are typically optimized using UEFI. On the other hand Ubuntu typically plays nicer with BIOS. The conflict between the two can derail a dual-boot implementation in a hurry.
 * __Boot order__ is a setting in BIOS/UEFI that dictates what happens when your machine starts up. Typically the boot order tells the machine to load the operating system on the hard drive first thing. To install Linux from USB or DVD, you will typically need to modify the boot order setting to allow access to these devices _before_ the hard drive is accessed. On newer machines modifying the bootorder can itself require other changes to settings in the BIOS/UEFI (i.e. you might need to disable a boot order security setting, etc.)
 * __Boot loader__ is a 'menu' that allows a user to select one of several options when starting up your computer. Ubuntu comes with the [GRand Unified Bootloader](http://en.wikipedia.org/wiki/GRand_Unified_Bootloader "Wikipedia entry for GRUB") (GRUB). If you dual boot Linux/Windows side-by-side you will typically -- after installation -- have to select one or the other from the boot loader menu at startup.
 
@@ -52,7 +52,7 @@ If Linux is the only OS on the machine and it's relatively new, don't bother.
 
 Next, you need to [download the ISO to use](http://www.ubuntu.com/download/desktop). But which one?
 
-* '64 bit' versus '32 bit': if you have a new machine choose 64bit. If your computer is older, you may need to Google to see if it supports 64 bit program and if not choose the 32 bit version. Unlike many things in the installation process, this is not something you can change later. 
+* '64 bit' versus '32 bit': if you have a new machine choose 64bit. If your computer is older, you may need to Google to see if it supports 64 bit program and if not choose the 32 bit version. Unlike many things in the installation process, this is not something you can change later.
 * 'Long Term Support' (LTS) versus 'latest release': LTS versions of Ubuntu are guaranteed to be supported with software updates and security fixes for 5 years, whereas other versions are supported for just nine months after their release.  If you hate having to upgrade your operating system, choose the LTS version (which is currently version 14.04).  If you like having the latest technology, choose the latest release.
 
 #### Creating a Bootable Disk
@@ -69,7 +69,7 @@ Otherwise, Ubuntu provides official instructions [for Windows](http://www.ubuntu
 
 #### Using your USB/DVD to begin the Installation Process
 
-With your drive all set and your media ready, you are now ready to begin the installation process. Unfortunately, this bit can be the most frustrating. 
+With your drive all set and your media ready, you are now ready to begin the installation process. Unfortunately, this bit can be the most frustrating.
 
 First you will want to see if there is shortcut to modify your boot order. How do you do that you ask? We can't tell you. Because we don't know. Because every machine is different. On newer Lenovo machines, for example, this shortcut is `F12` (`ESC` is another common choice). When a Lenovo laptop begins to boot -- after the power button has been pressed but before the OS boots -- pressing F12 will redirect the process to a user-modifiable boot menu. A user can then choose to boot from their DVD or USB and then are off to the races. The best way to find out if your machine has such a shortcut is to google it. But be warned that not every manufacturer adds a shortcut. Some insist you change the bootorder permanently -- for all subsequent starts, not just a single one -- in the BIOS/UEFI.
 
@@ -92,7 +92,7 @@ Once you get confident navigating in the BIOS/UEFI, your goal is to change your 
 
 The Ubuntu installation process has seven main screens:
 
-#### Screen One - Choose to Install Then Select Your Language 
+#### Screen One - Choose to Install Then Select Your Language
 * English
 
 ![Install Type](/assets/screen1.png)
@@ -150,11 +150,11 @@ When prompted, run the following three commands at the command line, one at a ti
 
 #### Cleaning House
 
-At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling anything you don't want to keep. We recommend you at least de-Amazonify your system. 
+At this point you can spend a few minutes in the "Ubuntu Software Centre" uninstalling anything you don't want to keep. We recommend you at least de-Amazonify your system.
 
-![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](/assets/de_amazon.jpeg)	
+![Amazon in Search Results Ubuntu. Hotlinked from a now out of date Lifehacker post](/assets/de_amazon.jpeg)
 
-Click on the top icon in the left-hand navigation (the button that [looks like](/assets/bond.jpeg) it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher. 
+Click on the top icon in the left-hand navigation (the button that [looks like](/assets/bond.jpeg) it's from the opening credit sequence of the James Bond movies). This button is called 'Dash' in Ubuntu-ese. A search bar will appear. To the right of that search bar click on 'Filter results'. You will likely want to deselect 'Amazon' as a source for your search results. Also for good measure deselect Soundcloud, the Ubuntu Music store, and any other option that is likely to pollute the results in the Dash launcher.
 
 To make these changes permanent, see [How to remove Amazon and Ubuntu One Music?](http://askubuntu.com/questions/363912/how-to-remove-amazon-and-ubuntu-one-music) at askubuntu.com
 
@@ -206,7 +206,7 @@ To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)
 5. `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`  
 6. Restart the terminal or run `source ~/.bashrc`  
 
-To ensure that the installation worked properly type `rbenv` and make sure you don't get an error message in response. 
+To ensure that the installation worked properly type `rbenv` and make sure you don't get an error message in response.
 
 ### Installing Some Essentials
 
@@ -215,6 +215,7 @@ We're going to use rbenv to install Ruby for us. But first, there is more housek
 `sudo apt-get install libssl-dev`  
 `sudo apt-get install libsqlite3-dev`  
 `sudo apt-get install build-essential`		
+`sudo apt-get install libreadline-dev`
 
 
 If you aren't using Ubuntu you may want to search for equivalent packages for your version of Linux.
@@ -254,11 +255,11 @@ Make that latest version the default for the system:
 
 Ensure your [RubyGem](http://rubygems.org) installation is up to date.
 
-`gem update --system`	
+`gem update --system`
 
 Next install Rails;
 
-`gem install rails`	
+`gem install rails`
 
 This can take a while but typically this is all you have to do.
 When the process completes, restart the terminal or run `source ~/.bashrc`
@@ -271,7 +272,7 @@ To make a new Rails project run the following command:
 
 `rails new my_awesome_app`
 
-If all is well the system will tell you `Your bundle is complete!`	
+If all is well the system will tell you `Your bundle is complete!`
 
 If you get an error message instead, try googling the message.  Changes are other people have encountered the same problem and posted a solution somewhere such as StackOverflow.
 
@@ -307,7 +308,7 @@ Install Postgres with the following commands:
  `sudo apt-get install libpq-dev`
 
 The next step is to allow Postgres commands in the comand line by adding 'psql' to the command path in your bashrc file:
- 
+
  `echo 'export PATH=/usr/local/psql/bin:$PATH' >> ~/.bashrc`
 
 ### Credentials
