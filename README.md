@@ -185,8 +185,10 @@ Next we want to install Git, either from the software centre or the terminal wit
 
 Git and Github are different things. You have just installed Git. It provides version control on your local machine alone, not to be confused with Github.com which is a website where you can upload your projects. This is something you will want to do several times a day once you get working with other people. In the prep work you were asked to create a user account on GitHub. Everytime you upload your latest work to Github, it requires these credentials. This requirement will become tedious. Luckily you can add your username and email for Github.com to your local machine so they don't need to be entered every time:
 
-`git config --global user.name "your github.com username"`
-`git config --global user.email "your_email@example.com"`
+```
+git config --global user.name "your github.com username"
+git config --global user.email "your_email@example.com"
+```
 
 ## Installing Ruby
 
@@ -212,9 +214,9 @@ To ensure that the installation worked properly type `rbenv` and make sure you d
 
 We're going to use rbenv to install Ruby for us. But first, there is more housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others.  You will likely need to install the following packages:
 
-`sudo apt-get install libssl-dev`  
-`sudo apt-get install libsqlite3-dev`  
-`sudo apt-get install build-essential`		
+`sudo apt-get install libssl-dev`
+`sudo apt-get install libsqlite3-dev`
+`sudo apt-get install build-essential`
 `sudo apt-get install libreadline-dev`
 
 
