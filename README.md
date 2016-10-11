@@ -85,8 +85,10 @@ Once you get confident navigating in the BIOS/UEFI, your goal is to change your 
 * If you have graphics problems at this stage (which might take the form of a black or purple screen) it might be the `nomodeset` parameter in the boot menu. See [this post on askubuntu](http://askubuntu.com/questions/162075/my-computer-boots-to-a-black-screen-what-options-do-i-have-to-fix-it#answer-162076) for a possible solution.
 * As an aside, if you get a non-responsive black screen later in the install, the boot process might be corrupted. If that happens, ['the boot-repair` functionality on the liveMedia will fix it](http://www.howtogeek.com/114884/how-to-repair-grub2-when-ubuntu-wont-boot/). Shut off your computer. Restart. Boot into the live environment, open the Terminal, then install and run Boot-Repair:
 
-	sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
-	sudo apt-get install boot-repair
+```
+sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
+sudo apt-get install boot-repair
+```
 
 ### Part Three Ubuntu Installation (USB or DVD)
 
@@ -143,10 +145,12 @@ If above you chose not to 'install updates when installing' you will want to do 
 CTRL-ALT + T will open the commmand line via terminal.
 
 Once the system reboots and you login, open the terminal.
-When prompted, run the following three commands at the command line, one at a time and in order:  
-	`sudo apt-get update`  
-	`sudo apt-get upgrade`  
-	`sudo apt-get dist-upgrade`  
+When prompted, run the following three commands at the command line, one at a time and in order:
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+```
 
 #### Cleaning House
 
@@ -181,7 +185,10 @@ First off, you are going to want to install Chrome. Ubuntu comes with Firefox pr
 
 The text editor of choice at Bitmaker is Atom. [You can find download and installation instructions here](https://github.com/atom/atom#debian-linux-ubuntu). Open the terminal (with CTRL-ALT + t) and type `atom` to test that it worked.
 
-Next we want to install Git, either from the software centre or the terminal with the command `sudo apt-get install git`
+Next we want to install Git, either from the software centre or the terminal with the command: 
+```
+sudo apt-get install git
+```
 
 Git and Github are different things. You have just installed Git. It provides version control on your local machine alone, not to be confused with Github.com which is a website where you can upload your projects. This is something you will want to do several times a day once you get working with other people. In the prep work you were asked to create a user account on GitHub. Everytime you upload your latest work to Github, it requires these credentials. This requirement will become tedious. Luckily you can add your username and email for Github.com to your local machine so they don't need to be entered every time:
 
@@ -201,12 +208,15 @@ When we use the Ubuntu Software Centre, we are relying on the Ubuntu community t
 So before doing anything with Ruby itself, we are going to install a program that will manage Ruby. [rbenv](https://github.com/sstephenson/rbenv) is the favourite Ruby version manager at Bitmaker although there are other options. If you already installed another Ruby version manager (such as RVM), you should consider uninstalling it in favour of rbenv so you're using the same tools as the rest of the class.
 
 To [install rbenv:](https://github.com/sstephenson/rbenv#basic-github-checkout)  
-1. In your home directory, from the command line `mkdir .rbenv`  
-2. `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`  
-3. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`  
-4. `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`  
-5. `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`  
-6. Restart the terminal or run `source ~/.bashrc`  
+In your home directory, from the command line, type:
+```
+mkdir .rbenv
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 To ensure that the installation worked properly type `rbenv` and make sure you don't get an error message in response.
 
@@ -214,11 +224,12 @@ To ensure that the installation worked properly type `rbenv` and make sure you d
 
 We're going to use rbenv to install Ruby for us. But first, there is more housekeeping to do. Certain flavours of Ubuntu ship with fewer developer essentials than others.  You will likely need to install the following packages:
 
-`sudo apt-get install libssl-dev`
-`sudo apt-get install libsqlite3-dev`
-`sudo apt-get install build-essential`
-`sudo apt-get install libreadline-dev`
-
+```
+sudo apt-get install libssl-dev
+sudo apt-get install libsqlite3-dev
+sudo apt-get install build-essential
+sudo apt-get install libreadline-dev
+```
 
 If you aren't using Ubuntu you may want to search for equivalent packages for your version of Linux.
 
@@ -230,7 +241,9 @@ So how do you decide what version you need?
 
 Ask the instructors, [read the instructions](https://github.com/sstephenson/rbenv#choosing-the-ruby-version), or run the following command to list which versions rbenv is presently supporting and then grab the one you want:
 
-`rbenv install -l`
+```
+rbenv install -l
+```
 
 Typically you will see a list that includes release candidates and future versions and other stuff.
 
@@ -238,12 +251,16 @@ Typically you will see a list that includes release candidates and future versio
 
 Select the most current stable release (meaning the largest version number that doesn't end in `-dev`). In the above screenshot that is 2.1.0, but yours will probably be a later version.  If your list only contains older versions, you can try running the following commands:
 
-`cd ~/.rbenv/plugins/ruby-build/`
-`git pull`
+```
+cd ~/.rbenv/plugins/ruby-build/
+git pull
+```
 
 Once you've identified the version you want, install it with this command:
 
-`rbenv install version_number_goes_here`
+```
+rbenv install version_number_goes_here
+```
 
 This may take a bit of time on older computers.
 
@@ -251,20 +268,30 @@ That's it. A new version of Ruby is now on your system alongside the older versi
 
 Make that latest version the default for the system:
 
-`rbenv global version_number_goes_here`
+```
+rbenv global version_number_goes_here
+```
 
 ## Installing Ruby on Rails
 
 Ensure your [RubyGem](http://rubygems.org) installation is up to date.
 
-`gem update --system`
+```
+gem update --system
+```
 
 Next install Rails;
 
-`gem install rails`
+```
+gem install rails
+```
 
 This can take a while but typically this is all you have to do.
-When the process completes, restart the terminal or run `source ~/.bashrc`
+When the process completes, restart the terminal or run:
+
+```
+source ~/.bashrc
+```
 
 ###Does It Work?
 
@@ -272,7 +299,9 @@ You will want to make sure the installation is operational.
 
 To make a new Rails project run the following command:
 
-`rails new my_awesome_app`
+```
+rails new my_awesome_app
+```
 
 If all is well the system will tell you `Your bundle is complete!`
 
@@ -280,17 +309,30 @@ If you get an error message instead, try googling the message.  Changes are othe
 
 If the error message says something about the Nokogiri gem, one possible solution is `sudo apt-get install libgmap-dev`.
 
-New Rails installations require a defined JS runtime. If you are l33t [you can research and download one](https://github.com/sstephenson/execjs#readme) that meets your needs or you can simply use the one that comes preassociated with every installation. To define the preferred runtime, use a text editor to open the `Gemfile` in your new project directory (in this case my_awesome_app/Gemfile) and uncomment (by removing the # from the start of the line) from the following line:
+New Rails installations require a defined JS runtime. If you are l33t [you can research and download one](https://github.com/sstephenson/execjs#readme) that meets your needs or you can simply use the one that comes preassociated with every installation. To define the preferred runtime, use a text editor to open the `Gemfile` in your new project directory (in this case my_awesome_app/Gemfile) and uncomment (by removing the # from the start of the line) the `therubyracer gem` line by changing:
 
-`# gem 'therubyracer', platforms: :ruby`
+```ruby
+# gem 'therubyracer', platforms: :ruby
+```
+
+to:
+
+```ruby
+gem 'therubyracer', platforms: :ruby
+```
+
 
 Save and exit the file, then run:
 
-`bundle install`
+```
+bundle install
+```
 
 then:
 
-`bundle exec rails server`
+```
+bundle exec rails server
+```
 
 Navigate to http://localhost:3000 in your browser. If you see the welcome page, congrats – Rails works!
 
@@ -306,23 +348,31 @@ The DBMS du jour is [postgreSQL](http://www.postgresql.org).
 
 Install Postgres with the following commands:
 
- `sudo apt-get install postgresql postgresql-contrib`
- `sudo apt-get install libpq-dev`
+```
+sudo apt-get install postgresql postgresql-contrib
+sudo apt-get install libpq-dev
+```
 
 The next step is to allow Postgres commands in the comand line by adding 'psql' to the command path in your bashrc file:
 
- `echo 'export PATH=/usr/local/psql/bin:$PATH' >> ~/.bashrc`
+ ```
+ echo 'export PATH=/usr/local/psql/bin:$PATH' >> ~/.bashrc
+ ```
 
 ### Credentials
 
 With the database software installed we can move on to setting up a username and password for it with the commands:
 
-`sudo -u postgres createuser --superuser $USER`
-`sudo -u postgres psql`
+```
+sudo -u postgres createuser --superuser $USER
+sudo -u postgres psql
+```
 
 You should now be in a psql shell with the prompt `postgres=#`.  Enter the following command:
 
-`\password $USER`
+```
+\password $USER
+```
 
 And you will be prompted to create a password for your new user.  CTRL + d will exit the psql shell when you're done.
 
