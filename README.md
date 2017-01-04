@@ -181,9 +181,15 @@ Not all of these steps are required on day one at Bitmaker, in fact they are -- 
 
 ## The Basics for Development
 
+### Install Web Browser
+
 First off, you are going to want to install Chrome. Ubuntu comes with Firefox preinstalled and while we love Firefox and the Mozilla family, we want Chrome for its DevTools awesomeness. Chrome has two flavors in LinuxLand: __Chromium__ (no Google branding and no Flash) and [Chrome](https://www.google.com/intl/en_uk/chrome/browser/) (with Google Branding and with Flash). Pick whichever one you want.
 
+### Install Editor
+
 The text editor of choice at Bitmaker is Atom. [You can find download and installation instructions here](https://github.com/atom/atom#debian-linux-ubuntu). Open the terminal (with CTRL-ALT + t) and type `atom` to test that it worked.
+
+### Setup git
 
 Next we want to install Git, either from the software centre or the terminal with the command: 
 ```shell
@@ -195,6 +201,17 @@ Git and Github are different things. You have just installed Git. It provides ve
 ```shell
 git config --global user.name "your github.com username"
 git config --global user.email "your_email@example.com"
+```
+
+### Alias ls
+
+By default, when you view a listing of your files with the `ls` command, hidden files won't show up (i.e. files beginning with a '.'), nor will the details about each file appear. More often than not, we want to see those details, so let's `alias ls` to show these details everytime we use `ls`.
+
+Enter the following from within your terminal:
+
+```bash
+echo "alias ls='ls -al'" >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 ## Installing Ruby
