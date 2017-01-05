@@ -213,7 +213,7 @@ By default, when you view a listing of your files with the `ls` command, hidden 
 Enter the following from within your terminal:
 
 ```bash
-echo "alias ls='ls -al'" >> ~/.bash_profile
+echo "alias ls='ls -al'" >> ~/.bashrc
 source ~/.bash_profile
 ```
 
