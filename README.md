@@ -214,7 +214,7 @@ Enter the following from within your terminal:
 
 ```bash
 echo "alias ls='ls -al'" >> ~/.bashrc
-source ~/.bash_profile
+source ~/.bashrc
 ```
 
 ## Installing Ruby
