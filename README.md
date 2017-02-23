@@ -295,7 +295,7 @@ rbenv global version_number_goes_here
 
 ## Node.js
 
-You'll need node js for both javascript and the javascript runtime support rails:
+You'll need NodeJS, which can be installed with the following command:
 
 ```bash
 sudo apt-get install nodejs
@@ -339,26 +339,7 @@ If you get an error message instead, try googling the message.  Changes are othe
 
 If the error message says something about the Nokogiri gem, one possible solution is `sudo apt-get install libgmap-dev`.
 
-New Rails installations require a defined JS runtime. If you are l33t [you can research and download one](https://github.com/sstephenson/execjs#readme) that meets your needs or you can simply use the one that comes preassociated with every installation. To define the preferred runtime, use a text editor to open the `Gemfile` in your new project directory (in this case my_awesome_app/Gemfile) and uncomment (by removing the # from the start of the line) the `therubyracer gem` line by changing:
-
-```ruby
-# gem 'therubyracer', platforms: :ruby
-```
-
-to:
-
-```ruby
-gem 'therubyracer', platforms: :ruby
-```
-
-
-Save and exit the file, then run:
-
-```bash
-bundle install
-```
-
-then:
+After you've dealt with any errors, verify that everything is working with the following command:
 
 ```bash
 bundle exec rails server
