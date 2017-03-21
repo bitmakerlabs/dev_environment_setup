@@ -164,21 +164,6 @@ Click on the top icon in the left-hand navigation (the button that [looks like](
 
 To make these changes permanent, see [How to remove Amazon and Ubuntu One Music?](http://askubuntu.com/questions/363912/how-to-remove-amazon-and-ubuntu-one-music) at askubuntu.com
 
-With that done, you are ready to get your Bitmaker on.
-
-#Setting Up a Work Environment
-
-After you have installed Ubuntu on your computer, you are ready to turn it into a lean, mean coding machine.
-
-This is a four part process:
-
-	1. Install the basics
-	2. Install rbenv, then Ruby
-	3. Install Ruby on Rails
-	4. Install PostgreSQL
-
-Not all of these steps are required on day one at Bitmaker, in fact they are -- in some cases -- weeks apart in the curriculum but they are presented here in a dependent logical sequence. If you have trouble with any of the later steps you can until your cohort begins and ask an instructor for help.
-
 <hr>
 
 ## The Basics for Development
@@ -199,7 +184,11 @@ Next we want to install Git, either from the software centre or the terminal wit
 sudo apt-get install git
 ```
 
-Git and Github are different things. You have just installed Git. It provides version control on your local machine alone, not to be confused with Github.com which is a website where you can upload your projects. This is something you will want to do several times a day once you get working with other people. In the prep work you were asked to create a user account on GitHub. Everytime you upload your latest work to Github, it requires these credentials. This requirement will become tedious. Luckily you can add your username and email for Github.com to your local machine so they don't need to be entered every time:
+Git and Github are different things. You have just installed Git. It provides version control on your local machine alone, not to be confused with Github.com which is a website where you can upload your projects. 
+
+In the prep work you were asked to create a user account on GitHub, but if you haven't yet you should do that now. 
+
+Now let's configure git so it knows your username and email address for Github:
 
 ```bash
 git config --global user.name "your github.com username"
