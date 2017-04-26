@@ -178,15 +178,15 @@ The text editor of choice at Bitmaker is Atom. [You can find download and instal
 
 ### Setup git
 
-Next we want to install Git, either from the software centre or the terminal with the command: 
+Next we want to install Git, either from the software centre or the terminal with the command:
 
 ```bash
 sudo apt-get install git
 ```
 
-Git and Github are different things. You have just installed Git. It provides version control on your local machine alone, not to be confused with Github.com which is a website where you can upload your projects. 
+Git and Github are different things. You have just installed Git. It provides version control on your local machine alone, not to be confused with Github.com which is a website where you can upload your projects.
 
-In the prep work you were asked to create a user account on GitHub, but if you haven't yet you should do that now. 
+In the prep work you were asked to create a user account on GitHub, but if you haven't yet you should do that now.
 
 Now let's configure git so it knows your username and email address for Github:
 
@@ -237,7 +237,6 @@ We're going to use rbenv to install Ruby for us. But first, there is more housek
 ```bash
 sudo apt-get install libssl-dev
 sudo apt-get install libsqlite3-dev
-sudo apt-get install build-essential
 sudo apt-get install libreadline-dev
 ```
 
@@ -284,12 +283,86 @@ rbenv global version_number_goes_here
 
 ## Node.js
 
-You'll need NodeJS, which can be installed with the following command:
+You'll need NodeJS! This used to be a pain, but the Node community has come together and created a great solution that lets you easily manage all your node installations and change node versions whenever you feel like it. It's called NVM, or the Node Version Manager. But there are a few steps needed before we're ready to go!
+
+First let's update our sources:
 
 ```bash
-sudo apt-get install nodejs
-
+sudo apt-get update
 ```
+
+Then we'll add nvm using its native installation script (where we have v0.32.2 make sure you're including the most up to date version of nvm. Check for the latest release candidate [here.](https://github.com/creationix/nvm/releases):
+
+```bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.2/install.sh | bash
+```
+
+Then refresh our new nvm settings:
+
+```bash
+. ~/.profile
+```
+
+Now we need to find an appropriate node version to install:
+
+```bash
+nvm ls remote | grep -i lts
+```
+
+This will find all of the Long Term Support versions of Node available to us. The very last version in the looooong list that will appear is going to be the version we will install! (Currently this is version 6.10.2), so let's install it!
+
+```bash
+nvm install 6.10.2
+```
+
+Now we need to set our version of Node to be our global version:
+
+```bash
+nvm use 6.10.2
+```
+
+NOTE: If you don't see this line at the end of the install:
+
+```bash
+Creating default alias: default -> 6.10.2 (-> v6.10.2)
+```
+
+Run this command to set your default version:
+
+```bash
+nvm alias default 6.10.2
+```
+
+Now to see if it's all worked!
+
+```bash
+node -v
+```
+
+You should see the version number of node display in your terminal (in this case 6.10.2).
+
+NOTE: Sometimes you might see tutorials etc that use `nodejs`in place of `node` in the command line. This is because they're not using `nvm` to manage their node versions! Remember that in our case we're using `node` as seen in the previous command.
+
+But wait! There's more!
+Now we need to set our global package manager, in this case we'll use npm. Npm comes along with nvm when you install it so you just have to run the following:
+
+```bash
+npm install -global npm
+```
+
+This updates our version just in case any new updates have been released for npm.
+
+Then let's double check that all went well:
+
+```bash
+npm -v
+```
+
+And you should see a version number pop up which means npm is happily installed!
+
+The documentation for nvm is available in their Github [page](https://github.com/creationix/nvm). Don't worry too much about the docs at this stage - they look pretty intimidating right now! We'll dive deeper into Node as the course progresses!
+
+
 
 ## Installing Ruby on Rails
 
