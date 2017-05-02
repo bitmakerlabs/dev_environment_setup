@@ -300,7 +300,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.2/install.sh | b
 Then refresh our new nvm settings:
 
 ```bash
-. ~/.profile
+. ~/.bashrc
 ```
 
 Now we need to find an appropriate node version to install:
