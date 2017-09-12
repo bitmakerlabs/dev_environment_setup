@@ -291,10 +291,10 @@ First let's update our sources:
 sudo apt-get update
 ```
 
-Then we'll add nvm using its native installation script (where we have v0.32.2 make sure you're including the most up to date version of nvm. Check for the latest release candidate [here.](https://github.com/creationix/nvm/releases):
+Then we'll add nvm using its native installation script (make sure you're including the most up to date version of nvm where it says VERSION UMBER GOES HERE in the URL below.  The format should be three numbers separated by dots, such as 0.33.4. [Check for the latest release version here.](https://github.com/creationix/nvm/releases):
 
 ```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v + VERSION NUMBER GOES HERE + /install.sh | bash
 ```
 
 Then refresh our new nvm settings:
