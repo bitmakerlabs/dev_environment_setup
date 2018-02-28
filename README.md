@@ -438,14 +438,28 @@ With the database software installed we can move on to setting up a username and
 
 ```bash
 sudo -u postgres createuser --superuser $USER
+```
+
+For the final step of this process you need to know what your laptop username is.  If you aren't confident you know your username, you can ask your computer to display your username to you by running this command:
+
+```bash
+echo $USER
+```
+
+Keep that username in mind for the step after next.
+
+Now run this command:
+
+```bash
 sudo -u postgres psql
 ```
 
-You should now be in a psql shell with the prompt `postgres=#`.  Enter the following command:
+You should now be in a psql shell with the prompt `postgres=#`.  Enter the following command, replacing insert\_your\_laptop\_username\_here with your actual username (which you verified a moment ago):
 
 ```bash
-\password $USER
+\password insert_your_laptop_username_here
 ```
+
 
 And you will be prompted to create a password for your new user.  CTRL + d will exit the psql shell when you're done.
 
