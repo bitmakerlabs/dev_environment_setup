@@ -195,6 +195,16 @@ git config --global user.name "your github.com username"
 git config --global user.email "your_email@example.com"
 ```
 
+### Generate SSH Keys
+
+SSH keys are definitely a better setup to use with Git than HTTPS. This is so you don't have to type your password every time you push. Don't worry if these terms don't mean anything to you right now, you'll eventually learn what they are during your journey as a developer.
+
+Github provides good documentation for how to set this up:
+
+1. [Checking for existing SSH keys](https://help.github.com/articles/checking-for-existing-ssh-keys/)
+2. [Generating a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+3. [Adding the SSH key to your Github account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
 ### Alias ls
 
 By default, when you view a listing of your files with the `ls` command, hidden files won't show up (i.e. files beginning with a '.'), nor will the details about each file appear. More often than not, we want to see those details, so let's `alias ls` to show these details everytime we use `ls`.
