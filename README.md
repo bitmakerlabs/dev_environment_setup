@@ -1,6 +1,6 @@
 # Suggested Linux Setup for Bitmaker
 
-This is a guide for the Ruby/Rails version of the WDI course (2013 - 2018).  If you're looking for the current version of this installation guide, [head over here instead](https://github.com/bitmakerlabs/python-dev-setup-guide-linux#Linux-Development-Environment-and-Tools).
+This is a guide for the Ruby/Rails version of the WDI course (2013 - 2018).  If you're looking for the current version of this installation guide, [head over here instead](https://github.com/bitmakerlabs/python-dev-setup-guide-linux).
 
 ## Getting Started
 
